@@ -1,0 +1,446 @@
+@charset "UTF-8";
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*飞的公共样式beginning*/
+/*设置字体*/
+@font-face {
+    font-family: lk;
+    src: url('../../fonts/lk.eot') format('embedded-opentype'),
+    url('../../fonts/lk.svg') format('svg'),
+    url('../../fonts/lk.ttf') format('truetype'),
+    url('../../fonts/lk.woff') format('woff');
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+    font-family: lk;
+    font-style: normal;
+}
+body {
+    font-family: "微软雅黑";
+}
+
+ol,
+ul,
+dl {
+    list-style: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+/*飞的公共样式end*/
+/*飞的header样式开始*/
+.navbar-brand {
+    float: left;
+    margin-right: 0px;
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: bold;
+    /*    transition: font-size 1s;*/
+    transition: all 0.3s ease-in-out;
+}
+
+.site-slogan {
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+/*导航样式beginning*/
+#menubg,
+.dropdown-menu {
+    background: #1995c9;
+}
+
+.cfweixin a {
+    position: relative;
+}
+
+.cfweixin a img {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: none;
+}
+
+.cfweixin a:hover img {
+    display: block;
+}
+
+.icon-phone::before {
+    content: '\e958';
+    font-size: 16px;
+}
+
+.cf-header-margin {
+    margin: 15px 0px;
+}
+
+/*菜单项间距*/
+.navbar-nav li a {
+    margin-right: 30px;
+    color: aliceblue;
+}
+
+.navbar-nav li a:hover {
+    color: #000;
+}
+
+/*飞的header样式结束*/
+
+/*飞的轮播样式开始*/
+#cf_carousel {
+    
+}
+#cf-carousel .carousel-item {
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#cf_carousel .carousel-item img {
+    width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+    #cf_carousel .carousel-item {
+        height: 330px;
+    }
+}
+/*飞的轮播样式结束*/
+
+/*飞的产品样式开始*/
+#cf-product {
+    background-color: #f0f0f0;
+}
+
+#cf-product .nav-item {
+    font-size: 18px;
+}
+
+#cf-product .nav-item a {
+    color: #000;
+    border: none;
+    padding: 0px 25px;
+}
+
+
+#cf-product .nav-item a.active {
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px purple solid;
+    color: purple;
+}
+
+/*飞的产品样式结束*/
+
+/*飞的尾部样式开始*/
+#footer {
+    width: 100%;
+    height: 200px;
+/*
+    background: center no-repeat;
+    background-image: url('/images/ft_bg.png');
+*/
+/*   注意：：在css样式表中写的background-image:url(图片的路径为相对本css文件的路径，而不是我们通常认为的相对加入css样式的网页的路径); 所以这里之前写错路径导致在除chrome外的其它浏览器中本地打开无法显示背景图片的问题 */
+    background: url("../../images/ft_bg.png") no-repeat center; 
+    color: #c6bdbd;
+    font-size: 15px;
+}
+#footer .container .row {
+    height: 200px;
+}
+
+#footer a {
+    color: #c6bdbd;
+}
+
+#footer h6 {
+    margin: 0.5rem 0rem;
+    font-size: 15px;
+}
+
+#footer li {
+    height: 27px;
+}
+
+/*飞的尾部样式结束*/
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " ("attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " ("attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
