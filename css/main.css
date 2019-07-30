@@ -329,7 +329,7 @@ a:link {
     background-image: url('/images/ft_bg.png');
 */
 /*   注意：：在css样式表中写的background-image:url(图片的路径为相对本css文件的路径，而不是我们通常认为的相对加入css样式的网页的路径); 所以这里之前写错路径导致在除chrome外的其它浏览器中本地打开无法显示背景图片的问题 */
-    background: url("../../images/ft_bg.png") no-repeat center; 
+    background: url("../../dm/images/ft_bg.png") no-repeat center; 
     color: #c6bdbd;
     font-size: 15px;
 }
