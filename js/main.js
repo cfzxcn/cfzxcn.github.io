@@ -29,7 +29,8 @@ $(function () {
     $(window).trigger('resize');
 
     // 3. 添加轮播图的滑动
-    let startX = 0, endX = 0;
+    let startX = 0,
+        endX = 0;
     let carouselInner = $('#cf_carousel .carousel-inner')[0];
     let $carousel = $('#cf_carousel');
     let carousel = $carousel[0];
@@ -39,7 +40,7 @@ $(function () {
     });
     carouselInner.addEventListener('touchmove', (e) => {
         endX = e.targetTouches[0].clientX;
-        if (endX - startX > 0) {  // 上一张
+        if (endX - startX > 0) { // 上一张
             $carousel.carousel('prev');
         } else if (endX - startX < 0) { // 下一张
             $carousel.carousel('next');
@@ -47,11 +48,11 @@ $(function () {
     });
 
     // 4. 超出内容处理
-    $(window).on('resize', ()=>{
+    $(window).on('resize', () => {
         let $ul = $('#cf_product .nav');
         let $allLis = $('.nav-item', $ul);
         let totalW = 0; // 所有li的宽度
-        $allLis.each((index, item)=>{
+        $allLis.each((index, item) => {
             totalW += $(item).width();
         });
         // console.log(totalW);
@@ -59,11 +60,11 @@ $(function () {
         // 获取父标签的宽度
         let parentW = $ul.parent().width();
         // console.log(parentW);
-        if(totalW > parentW){
+        if (totalW > parentW) {
             $ul.css({
                 width: totalW + 'px'
             })
-        }else {
+        } else {
             $ul.removeAttr('style');
         }
     }).trigger('resize');
@@ -72,7 +73,48 @@ $(function () {
 });
 
 
+//使用淡入效果，内容延迟出现的特效  开始====================================================
+if ($("[data-animation-effect]").length > 0) {
+    $("[data-animation-effect]").each(function (index, el) {
+        var $this = $(this);
+        var animationEffect = $this.attr["data-animation-effect"];
+        setTimeout(function () {
+            $this.removeClass("object-non-visiable").addClass("object-visiable");
+            $this.addClass('animated ' + animationEffect);
+        }, 800);
+    });
+}
+//使用淡入效果，内容延迟出现的特效  结束====================================================
+
+// 2. 工具的提示 ,放到上面不起作用
+$('[data-toggle="tooltip"]').tooltip();
 
 
-    // 2. 工具的提示 ,放到上面不起作用
-    $('[data-toggle="tooltip"]').tooltip();
+//图集切换特效开始
+$(".filter li a").click(function () {
+    var filterValue = $(this).attr('data-filter');
+    $(".isotope-container").isotope({
+        filter: filterValue
+    });
+
+    $(this).addClass('active').parent().siblings().children().removeClass('active');
+    return false;
+});
+
+//图集切换特效结束
+
+//滚动监听
+$('body').scrollspy({
+    target: '#cfnavbar'
+})
+
+//平滑滚动
+$(".navbar a").click(function (event) {
+//    console.log(this.hash);
+    var target = $(this.hash);
+    //    console.log(target.offset().top);
+      $("html").animate({
+        scrollTop:target.offset().top-150
+      },500);
+
+});

@@ -15,22 +15,31 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!--    <link rel="stylesheet" href="css/normalize.css">-->
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/maintemp.css">
-    <!--    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="../dm/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--    <meta name="theme-color" content="#fafafa">-->
 </head>
 
-<body>
+<body data-spy="scroll">
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+<!-- 本页主要功能：
+   一、仿：https://ke.qq.com/webcourse/index.html#cid=260203&term_id=100306775&taid=1761250124232811&type=1024&vid=s1422nfoxbr ，图集及弹出模态框，原效果：file:///F:/dm/Bootstrap%20%E4%B8%87%E5%92%8C%E6%BA%90%E7%A0%81/project/index.html，
+   二、animate特效，下载最新animate.css，chrome大部分感觉不支持，傲游和360极速生效
+   三、通过在class上添加 object-non-visiable" data-animation-effect="fadeIn ，以及和JS和2个CSS样式的配合，实现淡入延迟效果。
+       
+          
+                -->
     <!--------------------头部-begin------------------------------>
-    <nav class="navbar navbar-light bg-light">
+    
+    <nav class="navbar navbar-light bg-light fixed-top">
         <div class="container" style="border: 1px solid silver;">
             <div class="row" style="border: 1px solid purple;">
 
                 <div class="col-md-7 col-lg-6 col-xl-6" style="border: 1px solid olive;">
-                    <a class="navbar-brand" href="#" style="min-width: 196px;"><img src="../dm/images/zzlogo.jpg" alt="华胜未来北京科技有限公司"></a>
+                    <a class="navbar-brand" href="" style="min-width: 196px;"><img src="../dm/images/zzlogo.jpg" alt="华胜未来北京科技有限公司" class="animated fadeInDownBig"></a>
                 </div>
 
                 <div class="col-md-5 col-lg-6 col-xl-6" style="border: 1px solid red;">
@@ -54,213 +63,388 @@
             <div class="collapse navbar-collapse" id="cfnavbar">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active mr-2">
-                        <a class="nav-link" href="#">网站首页</a>
+                        <a class="nav-link" href="#shouye">网站首页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">联系我们</a>
+                        <a class="nav-link" href="">联系我们</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#goods" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             产品介绍
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="">Action</a>
+                            <a class="dropdown-item" href="">Another action</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="">Something else here</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">联系我们</a>
+                        <a class="nav-link" href="#news" tabindex="-1" aria-disabled="true">新闻中心</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">联系我们</a>
+                        <a class="nav-link" href="">联系我们</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">联系我们</a>
+                        <a class="nav-link" href="">联系我们</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">联系我们</a>
+                        <a class="nav-link" href="#footer">联系我们</a>
                     </li>
                 </ul>
 
             </div>
         </div>
     </nav>
+
     <!--------------------头部-end------------------------------>
 
 
     <!--我们的团队开始-->
-    <section>
+    <section  id="shouye">
         <div class="text-center mt-4 mb-4">
-            <h3><strong>我们的团队</strong></h3>
+            <h3 class="animated heartBeat"><strong>我们的团队-首页</strong></h3>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
 
-                    <ul class="nav nav-pills justify-content-center">
+                    <ul class="nav nav-pills justify-content-center filter">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">客服部</a>
+                            <a class="nav-link active" href="" data-filter="*">所有部门</a>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">工程部</a>
+                            <a class="nav-link" href="" data-filter=".iso1">工程部</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">市场部</a>
+                            <a class="nav-link" href="" data-filter=".iso2">市场部</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">研发部</a>
+                            <a class="nav-link" href="" tabindex="-1" aria-disabled="true" data-filter=".iso3">研发部</a>
                         </li>
                     </ul>
+                </div>
+            </div>
+            <br />
+            <div class="container">
+                <div class="isotope-container row">
 
-                    <br />
-                    <div class="row">
-
-                        <div class="card-deck mb-3">
-
-                            <div class="card">
-                                <img class="card-img-top" src="../dm/images/girls.jpg" alt="">
-                                <div class="card-body">
-                                </div>
-                                <div class="card-footer">
-                                    <h5 class="card-title text-center">依依1</h5>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <img class="card-img-top" src="../dm/images/girls.jpg" alt="">
-                                <div class="card-body">
-                                </div>
-                                <div class="card-footer">
-                                    <h5 class="card-title text-center">依依2</h5>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <img class="card-img-top" src="../dm/images/girls.jpg" alt="">
-                                <div class="card-body">
-                                </div>
-                                <div class="card-footer">
-                                    <h5 class="card-title text-center">依依3</h5>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="card-deck mb-3">
-                            <div class="card">
-                                <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title1</h5>
-
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">Card title2</h5>
-
-                                </div>
-                                <div class="card-footer text-center">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title2</h5>
-
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">Last updated 3 mins ago</small>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="card mr-1 mb-2" style="width: 18rem;">
-                            <img class="card-img-top" src="../dm/images/286180-yy.jpg" alt="Card image cap">
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso1">
+                       
+                        <div class="card overlay-container" style="width: rem;">
+                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="">
                             <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title text-center">红旗Linux</h5>
+                                <a href="#" class="overlay" data-toggle="modal" data-target="#Modal1">
+                                    <i class="fa fa-search-plus"></i>
+                                    <h5 class="card-title text-center">CentOS工程部</h5>
                                 </a>
                             </div>
-                        </div>
+                            <a href="#" data-toggle="modal" data-target="#Modal1">
+                                <h5 class="card-title text-center">CentOS工程部</h5>
+                            </a>
+<!--模态框组件开始，应该是兼容性的问题，在chrome中，不显示模态框淡入（fade）效果，在edge和傲游中正常-->
+                            <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                            <h5 class="modal-title text-white" id="exampleModalLabel">美人如玉剑如虹</h5>
+                                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4>微雨燕双飞，落花人独立</h4>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p>梦后楼台高锁,酒醒帘幕低垂. 去年春恨却来时,落花人独立,微雨燕双飞. 记得小苹初见,两重心字罗衣. 琵琶弦上说相思,当时明月在,曾照彩云归</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <img src="img/yylg.jpg" alt="" class="img-fluid rounded">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
 
-
-                        <div class="card mr-1 mb-2" style="width: 18rem;">
-                            <img class="card-img-top" src="../dm/images/286180-yy.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title text-center">红旗Linux</h5>
-                                </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="card mr-1 mb-2" style="width: 18rem;">
-                            <img class="card-img-top" src="../dm/images/286180-yy.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <a href="#">
-                                    <h5 class="card-title text-center">红旗Linux</h5>
-                                </a>
-                            </div>
-                        </div>
-
-
-
-
-
-
 
 
 
 
                     </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso2">
+                        <div class="card" style="width: rem;">
+                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <a href="">
+                                    <h5 class="card-title text-center">红旗Linux市场部</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso3">
+                        <div class="card" style="width: rem;">
+                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <a href="">
+                                    <h5 class="card-title text-center">Ubuntu研发部</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-1 iso1">
+                        <div class="card" style="width: rem;">
+                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="">
+                            <div class="card-body">
+                                <a href="">
+                                    <h5 class="card-title text-center">Red Hat Linux工程部</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
     <!--我们的团队结束-->
+<!--<div style="height: 2000px;"></div>-->
+    <!--卡片组演示开始-产品介绍goods-->
+    <section id="goods">
+    <div class="container">
+       <div class="text-center mt-4 mb-4">
+            <h3><strong>产品介绍goods</strong></h3>
+        </div>
+        <div class="row">
+            <div class="card-deck mb-3">
 
+                <div class="card">
+                    <img class="card-img-top animated flipInY" src="../dm/images/girls.jpg" alt="">
+                    <div class="card-body">
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="card-title text-center">goods</h5>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <img class="card-img-top animated zoomIn" src="../dm/images/girls.jpg" alt="">
+                    <div class="card-body">
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="card-title text-center">依依2</h5>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <img class="card-img-top animated lightSpeedIn" src="../dm/images/girls.jpg" alt="">
+                    <div class="card-body">
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="card-title text-center">依依3</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>    
+    <!--卡片组演示结束-->
+    
+    <!--新闻中心开始-->   
+ <section  id="news" class="mb-5">
+        <div class="mt-4 mb-4">
+            <h3 class="text-center"><strong>新闻中心</strong></h3>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-9">
+<p>彼黍离离，彼稷之苗。行迈靡靡，中心摇摇。知我者，谓我心忧；不知我者，谓我何求。悠悠苍天，此何人哉？
+彼黍离离，彼稷之穗。行迈靡靡，中心如醉。知我者，谓我心忧；不知我者，谓我何求。悠悠苍天，此何人哉？
+彼黍离离，彼稷之实。行迈靡靡，中心如噎。知我者，谓我心忧；不知我者，谓我何求。悠悠苍天，此何人哉？</p>
+<p>击鼓其镗，踊跃用兵。土国城漕，我独南行。 从孙子仲，平陈与宋。不我以归，忧心有忡。 爰居爰处？爰丧其马？于以求之？于林之下。 死生契阔，与子成说。执子之手，与子偕老。 于嗟阔兮，不我活兮。于嗟洵兮，不我信兮。</p>
+                </div>
+                <div class="col-md-3">
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          黍离
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+彼黍离离，彼稷之苗。行迈靡靡，中心摇摇。知我者，谓我心忧；不知我者，谓我何求。悠悠苍天，此何人哉？
+彼黍离离，彼稷之穗。行迈靡靡，中心如醉。知我者，谓我心忧；不知我者，谓我何求。悠悠苍天，此何人哉？
+彼黍离离，彼稷之实。行迈靡靡，中心如噎。知我者，谓我心忧；不知我者，谓我何求。悠悠苍天，此何人哉？
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          击鼓.手风琴折叠范例
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+击鼓其镗，踊跃用兵。土国城漕，我独南行。
+从孙子仲，平陈与宋。不我以归，忧心有忡。
+爰居爰处？爰丧其马？于以求之？于林之下。
+死生契阔，与子成说。执子之手，与子偕老。
+于嗟阔兮，不我活兮。于嗟洵兮，不我信兮。
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+  菩提偈  <small>唐代：惠能</small>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+菩提本无树，明镜亦非台。
+佛性常清净，何处有尘埃！
+
+身是菩提树，心为明镜台。
+明镜本清净，何处染尘埃！
+
+菩提本无树，明镜亦非台。
+本来无一物，何处惹尘埃！
+
+菩提只向心觅，何劳向外求玄？
+听说依此修行，西方只在目前！
+      </div>
+    </div>
+  </div>
+</div>
+
+                </div>
+                
+            </div>
+     </div>
+</section> 
+  <!--新闻中心结束-->   
+    
+    <!--   带页脚的卡片组演示开始-->
+    <section id="course">
+    <div class="container">
+        <div class="row">
+            <div class="card-deck mb-3 object-non-visiable" data-animation-effect="fadeIn">
+                <div class="card">
+                    <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title1</h5>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Card title2</h5>
+
+                    </div>
+                    <div class="card-footer text-center">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title2</h5>
+
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>    
+    <!--   带页脚的卡片组演示结束-->
+    
+    
+    
+    
+    
+    <!--尾部开始-->
+    <footer id="footer" class="">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-md-4 d-none d-lg-block">
+                    <!-- 这里不加1个row，下面的2个ul将竖排-->
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <ul class="col-md-4">
+                            <li><a href="#">企业动态</a></li>
+                            <li><a href="#">人才招聘</a></li>
+                            <li><a href="#">营销网络</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                        <ul class="col-md-4">
+                            <li><a href="#">企业动态</a></li>
+                            <li><a href="#">人才招聘</a></li>
+                            <li><a href="#">营销网络</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <address>
+                        <h6>华胜未来（北京）科技有限公司</h6>
+                        <h6>地址：北京市海淀区知春大厦A座903</h6>
+                        <h6>联系电话：010-51652205</h6>
+                        <h6>邮箱：yitang@chinakingsoft.com.cn</h6>
+                        <h6>Copyright &copy; 2000-2019 <a href="http://www.miitbeian.gov.cn" target="_blank">京ICP备18063685号</a>
+                        </h6>
+                    </address>
+                </div>
+                <div class="col-md-6 col-lg-3 d-none d-sm-none d-md-block">
+                    <h6>联系我们</h6>
+                    <a href=""><img src="../dm/images/weixin-h.png" width="50" alt="" data-toggle="tooltip" data-placement="bottom" title="微信号：shetuan02"></a>
+                    <a href=""><img src="../dm/images/xinlang-h.png" width="50" alt="" data-placement="bottom" data-toggle="tooltip" title="微博：华胜未来"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--尾部结束-->    
     <!--    <script src="js/vendor/modernizr-3.7.1.min.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+  <script src="js/vendor/jquery-3.4.1.min.js"></script>
 
-    </script>
+        <script src="js/plugins.js"></script>
 
-    <!--    <script src="js/plugins.js"></script>-->
-
-    <!--    <script src="js/vendor/popper.js"></script>-->
+        <script src="js/vendor/popper.js"></script>
     <script src="../dm/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-
+    <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/main.js"></script>
-    <!--    singlePageNav和BS的二级导航有冲突，使用后，折叠菜单在小屏幕下无法打开-->
-    <!--    <script src="../js/jquery.singlePageNav.min.js"></script>-->
-    <!--    <script src="js/wow.min.js"></script>-->
-    <!--
-    <script>
+        <script>
         $(function() {
-            /*导航跳转效果插件*/
-            $('.nav').singlePageNav({
-                offset: 70
-            });
-            /*小屏幕导航点击关闭菜单*/
-            $('.navbar-collapse a').click(function() {
+
+            /*小屏幕导航点击关闭菜单，成功！*/
+  $('.navbar-collapse a').click(function() {
                 $('.navbar-collapse').collapse('hide');
             });
         })
     </script>
--->
 </body>
 
 </html>

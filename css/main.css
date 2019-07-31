@@ -199,6 +199,7 @@ textarea {
 }
 body {
     font-family: "微软雅黑";
+    padding-top: 150px;
 }
 
 ol,
@@ -294,6 +295,26 @@ a:link {
     }
 }
 /*飞的轮播样式结束*/
+
+
+/*客户服务每块的鼠标悬停效果*/
+.cfoutline:hover {
+    background: #f1f1f1;
+    box-shadow: 1px 1px 5px #ccc;
+}
+/*按钮样式*/
+.card-body .btn{
+    margin: 10px 0;
+    background: rgb(64, 210, 177);
+    border-color: rgb(64, 210, 177);
+    border-radius: 0;
+    padding: 6px 20px;
+    transition: all 0.3s;
+}
+.card-body .btn:hover{
+    background: rgb(44, 142, 120);
+}
+
 
 /*飞的产品样式开始*/
 #cf-product {

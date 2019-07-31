@@ -187,18 +187,22 @@ textarea {
 @font-face {
     font-family: lk;
     src: url('../../fonts/lk.eot') format('embedded-opentype'),
-    url('../../fonts/lk.svg') format('svg'),
-    url('../../fonts/lk.ttf') format('truetype'),
-    url('../../fonts/lk.woff') format('woff');
+        url('../../fonts/lk.svg') format('svg'),
+        url('../../fonts/lk.ttf') format('truetype'),
+        url('../../fonts/lk.woff') format('woff');
 }
 
 [class^="icon-"],
-[class*=" icon-"]{
+[class*=" icon-"] {
     font-family: lk;
     font-style: normal;
 }
+
 body {
     font-family: "微软雅黑";
+    color: #333;
+    padding-top: 120px;
+    position: relative;
 }
 
 
@@ -206,50 +210,150 @@ body {
 a:link {
     text-decoration: none;
 }
-/*飞的公共样式end*/
 
+/*飞的公共样式end*/
+section#shouye {
+    padding: 30px 0px;
+}
+section#goods {
+    background: #f8f8f8;
+    padding: 30px 0px 50px;
+}
+section#course {
+    background: #f8f8f8;
+    padding: 50px 0px;
+}
 .row {
     width: 100%;
-        }
+}
 
 input[type="search"] {
     margin-right: 5px;
 }
+
 /*飞的header样式开始*/
 .form-inline {
     flex-flow: row nowrap;
-    
+
 }
-@media (max-width: 767px) {
-    
-    
-}
+
+@media (max-width: 767px) {}
+
 /*导航样式beginning*/
 
 
 /*飞的header样式结束*/
 
 
+/*我们的团队样式开始*/
+/*图集样式开始*/
+.overlay-container {
+    position: relative;
+}
 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(98, 165, 216, 0.7);
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: all 0.2s;
+    opacity: 0;
+}
 
+.overlay i {
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    font-size: 20px;
+    color: #fff;
+}
 
+.overlay h5 {
+    position: absolute;
+    bottom: 100px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
 
+.overlay-container:hover .overlay {
+    opacity: 1;
+    transform: scale(1);
+}
 
+.card-body {
+    padding: 0.5rem;
+}
 
+/*图集样式结束*/
+/*我们的团队样式结束*/
+/*模态框样式开始*/
+.close {
+    opacity: 1;
+}
+
+/*模态框样式结束*/
+
+/*配合JS淡入效果*/
+.object-non-visiable {
+    opacity: 0;
+}
+
+.object-visiable {
+    opacity: 1;
+}
+
+/*新闻中心样式开始*/
+.card-header .btn.collapsed {
+        background: #333333;
+}
+.card-header {
+    padding: 0;
+    background: #0549b8;
+}
+
+.card-header .btn:hover {
+    background: #0549b8;
+}
+
+.card-header .btn {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    padding: 15px;
+}
+.card-header .btn::after {
+    font-family: "fontawesome";
+    content: '\f147';
+    position: absolute;
+    right: 15px;
+}
+.card-header .btn.collapsed::after {
+    content: '\f196';
+}
+/*新闻中心样式结束*/
 
 /*飞的尾部样式开始*/
 #footer {
     width: 100%;
     height: 200px;
-/*
+    /*
     background: center no-repeat;
     background-image: url('/images/ft_bg.png');
 */
-/*   注意：：在css样式表中写的background-image:url(图片的路径为相对本css文件的路径，而不是我们通常认为的相对加入css样式的网页的路径); 所以这里之前写错路径导致在除chrome外的其它浏览器中本地打开无法显示背景图片的问题 */
-    background: url("../../images/ft_bg.png") no-repeat center; 
+    /*   注意：：在css样式表中写的background-image:url(图片的路径为相对本css文件的路径，而不是我们通常认为的相对加入css样式的网页的路径); 所以这里之前写错路径导致在除chrome外的其它浏览器中本地打开无法显示背景图片的问题 */
+    background: url("../../dm/images/ft_bg.png") no-repeat center;
     color: #c6bdbd;
     font-size: 15px;
 }
+
 #footer .container .row {
     height: 200px;
 }
@@ -266,6 +370,7 @@ input[type="search"] {
 #footer li {
     height: 27px;
 }
+
 /*飞的尾部样式结束*/
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
