@@ -201,46 +201,190 @@ textarea {
 body {
     font-family: "微软雅黑";
     color: #333;
-    padding-top: 120px;
+    padding: 85px 0px 0px 0px;
+    margin: 0px;
     position: relative;
 }
-
-
 
 a:link {
     text-decoration: none;
 }
 
 /*飞的公共样式end*/
+/*
 section#shouye {
-    padding: 30px 0px;
+    padding: 25px 0px;
 }
+*/
 section#goods {
     background: #f8f8f8;
-    padding: 30px 0px 50px;
+
 }
+
 section#course {
     background: #f8f8f8;
-    padding: 50px 0px;
 }
+
 .row {
     width: 100%;
 }
 
 input[type="search"] {
-    margin-right: 5px;
+    /*    margin-right: 5px;*/
 }
 
 /*飞的header样式开始*/
 .form-inline {
     flex-flow: row nowrap;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+.cf-my-2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.logo {
+    float: left;
+    transform: scale(0.7);
+/*    margin-right: 0px;*/
+    margin-right: -29px;
+/*    margin-top: -10px;*/
+    transition: all 0.3s ease-in-out;    
+}
+.site-name {
+    font-size: 16px;
+    font-weight: bold;
+    /*    transition: font-size 1s;*/
+    transition: all 0.3s ease-in-out;
+}
+
+.site-name a {
+    color: #181fbf;
+}
+
+.site-slogan {
+    font-size: 14px;
+}
+/*
+#cf-headertext-ml {
+    margin-left: -29px;
+}
+*/
+/*导航样式beginning*/
+/*折叠菜单按钮位置*/
+.navbar-toggler {
+    position: absolute;
+    top: 20px;
+    right: 14px;
+}
+
+/*折叠菜单背景颜色*/
+.navbar > .container-fluid {
+    background-color: #333;
+}
+
+#menubg {
+    background: #1995c9;
+    width: 100%;
+}
+
+/*不加bg-cfwhite样式会导致header固定在顶部滚动鼠标时下面内容露出*/
+.bg-cfwhite {
+    background-color: #fff !important;
+}
+
+.navbar {
+    padding: 0px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+    /*    padding: 11px 20px;*/
 
 }
 
-@media (max-width: 767px) {}
+/*悬停在菜单项上的文字及背景色*/
+.navbar-dark .navbar-nav .nav-link:hover {
+    /*    display: block;*/
+    color: #fff;
+    background-color: #000;
+}
+/*折叠菜单最小时，鼠标悬停在菜单项上时的左右内边距*/
+    .navbar-nav .nav-item .nav-link {
+        padding: 9px 10px;
 
-/*导航样式beginning*/
+    }
+/*二级菜单高度及颜色*/
+.dropdown-item {
+    padding: 0.22em 1rem;
+}
 
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #16181b;
+    background-color: #CCC;
+}
+
+/*二级菜单分隔线高度*/
+.dropdown-divider {
+    margin: 0.1rem 0;
+    border-top: 1px solid #999;
+}
+
+/*二级菜单整体设置*/
+.dropdown-menu {
+    padding: 0.2rem 0;
+    margin: 0;
+    font-size: 0.93rem;
+
+}
+
+/*导航栏及LOGO滚动缩小开始*/
+/*
+.fixed-header-on nav .container .row >div {
+        height: 50px;
+}
+*/
+.fixed-header-on .cf-my-2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.fixed-header-on .logo {
+    transform: scale(0.7);
+    margin-right: -29px;
+        transition: all 0.5s ease-in-out;
+}
+
+.fixed-header-on .site-name {
+    font-size: 16px;
+/* transition: font-size 1s;*/
+    transition: all 0.5s ease-in-out;
+}
+#cf-headertext-ml {
+    margin-left: 0px;
+}
+
+/*导航栏及LOGO滚动缩小结束*/
+/*折叠菜单按钮背景颜色*/
+button.navbar-toggler {
+    background-color: #000;
+    border-color: #fff;
+}
+
+button.navbar-toggler:hover {
+    background-color: #333;
+    border-color: #fff;
+}
+
+/*折叠菜单中搜索框上边距及PC宽度菜单中上边距*/
+
+/*折叠菜单中搜索框的宽度*/
+.form-control {
+    width: 80%;
+}
 
 /*飞的header样式结束*/
 
@@ -310,8 +454,9 @@ input[type="search"] {
 
 /*新闻中心样式开始*/
 .card-header .btn.collapsed {
-        background: #333333;
+    background: #333333;
 }
+
 .card-header {
     padding: 0;
     background: #0549b8;
@@ -329,17 +474,19 @@ input[type="search"] {
     color: #fff;
     padding: 15px;
 }
+
 .card-header .btn::after {
     font-family: "fontawesome";
     content: '\f147';
     position: absolute;
     right: 15px;
 }
+
 .card-header .btn.collapsed::after {
     content: '\f196';
 }
-/*新闻中心样式结束*/
 
+/*新闻中心样式结束*/
 /*飞的尾部样式开始*/
 #footer {
     width: 100%;
@@ -349,7 +496,7 @@ input[type="search"] {
     background-image: url('/images/ft_bg.png');
 */
     /*   注意：：在css样式表中写的background-image:url(图片的路径为相对本css文件的路径，而不是我们通常认为的相对加入css样式的网页的路径); 所以这里之前写错路径导致在除chrome外的其它浏览器中本地打开无法显示背景图片的问题 */
-    background: url("../../dm/images/ft_bg.png") no-repeat center;
+    background: url("/images/ft_bg.png") no-repeat center;
     color: #c6bdbd;
     font-size: 15px;
 }
@@ -372,12 +519,96 @@ input[type="search"] {
 }
 
 /*飞的尾部样式结束*/
-/* ==========================================================================
+
+/*    默认的折叠菜单样式，即超小屏幕，<576px*/
+.form-inline .form-control {
+    width: 75%;
+}
+
+.form-inline .btn {
+    width: 25%;
+}
+
+/*飞的media query开始*/
+/*BS4小屏幕（大于等于576px）*/
+@media (min-width:576px) {
+
+    /*   飞加的，一级导航菜单项当可视宽度小于等于959时，菜单项左右间距变为10，以前是15 */
+    .navbar-nav .nav-item .nav-link {
+        padding: 9px 10px;
+        font-size: 16px;
+    }
+
+}
+
+/*BS4中等屏幕（大于等于768px）*/
+@media (min-width:768px) {
+    .cf-my-2 {
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+/*大于768时，就是展现出大菜单时，logo距右边为零*/
+.logo {
+    transform: scale(1);
+    margin-right: 0px;
+} 
+
+    /*   飞加的，一级导航菜单项当可视宽度小于等于959时，菜单项左右间距变为10，以前是15 */
+    body {
+        padding-top: 150px;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        padding: 7px 8px;
+        font-size: 14px;
+    }
+
+    .form-inline .form-control {
+        width: 55%;
+    }
+
+    .form-inline .btn {
+        padding: 0.375rem 0.4rem;
+        font-size: 0.95rem;
+    }
+
+    .site-name {
+        font-size: 22px;
+    }
+/*二级菜单高度及颜色*/
+.dropdown-item {
+    padding: 0.35rem 1rem;
+}    
+}
+
+/*大屏幕（桌面显示器 ，大于等于992px）*/
+@media (min-width: 992px) {
+    .navbar-nav .nav-item .nav-link {
+        padding: 11px 14px;
+        font-size: 16px;
+    }
+
+    .form-inline .form-control {
+        width: 100%;
+    }
+}
+
+/*超大屏幕（大桌面显示器 ，大于等于1200px）*/
+@media (min-width:1200px) {
+    .navbar-nav .nav-item .nav-link {
+        padding: 10px 20px;
+
+    }
+
+}
+
+/*飞的media query结束*/
+
+/* 
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
-   ========================================================================== */
-
+==== */
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
@@ -389,11 +620,11 @@ input[type="search"] {
     /* Style adjustments for high resolution devices */
 }
 
-/* ==========================================================================
+/* 
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+==== */
 
 @media print {
 

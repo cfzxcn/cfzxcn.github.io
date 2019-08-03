@@ -1,3 +1,35 @@
+/*导航栏及LOGO滚动缩小开始*/
+/*滚动判断*/
+$(window).scroll(function(){
+   headerInit(); 
+});
+
+function headerInit(){
+    if ($(this).scrollTop()>0){
+        $("body").addClass("fixed-header-on");
+    }else{
+        $("body").removeClass("fixed-header-on");
+    }
+}
+/*初始化*/
+headerInit();
+
+/*导航栏及LOGO滚动缩小结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(function () {
     // 1. 轮播图
     $(window).on('resize', () => {
@@ -118,3 +150,13 @@ $(".navbar a").click(function (event) {
       },500);
 
 });
+
+
+
+
+
+
+
+
+
+

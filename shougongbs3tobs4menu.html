@@ -1,114 +1,125 @@
 <!doctype html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../dm/bootstrap-4.3.1-dist/css/bootstrap.css">
-    <title>git测试h5bp72bs4</title>
+    <title>原BS3手工导航现用BS4环境</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!--
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
 -->
     <!-- Place favicon.ico in the root directory -->
-
     <!--    <link rel="stylesheet" href="css/normalize.css">-->
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/maintemp.css">
+    <link rel="stylesheet" href="css/brackets.css">
     <link rel="stylesheet" href="css/s.min.css">
     <link rel="stylesheet" href="../dm/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--    <meta name="theme-color" content="#fafafa">-->
 </head>
-
 <body data-spy="scroll">
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
     <!-- 本页主要功能：
-   一、仿：https://ke.qq.com/webcourse/index.html#cid=260203&term_id=100306775&taid=1761250124232811&type=1024&vid=s1422nfoxbr ，图集及弹出模态框，原效果：file:///F:/dm/Bootstrap%20%E4%B8%87%E5%92%8C%E6%BA%90%E7%A0%81/project/index.html，
-   二、animate特效，下载最新animate.css，chrome大部分感觉不支持，傲游和360极速生效
-   三、通过在class上添加 object-non-visiable" data-animation-effect="fadeIn ，以及和JS和2个CSS样式的配合，实现淡入延迟效果。
-
-                -->
+   一、8月2日，修改原BS3下按教程写的成功的导航栏，想移植到BS4下，但未成功，因时间所限，暂时放弃                -->
     <!--------------------头部-begin------------------------------>
-    <div class="cfblock">测试scss</div>
+<!--如果不加navbar -default ,则无法固定在页面顶部，即使css中body设了padding-top也无效-->
+    <header class="navbar-default fixed-top">
 
-
-    <nav class="navbar navbar-light bg-light fixed-top">
-        <div class="container" style="border: 1px solid silver;">
-            <div class="row" style="border: 1px solid purple;">
-
-                <div class="col-md-7 col-lg-6 col-xl-6" style="border: 1px solid olive;">
-                    <a class="navbar-brand" href="" style="min-width: 196px;"><img src="../dm/images/zzlogo.jpg" alt="华胜未来北京科技有限公司" class="animated fadeInDownBig"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 col-sm-4 col-xs-4">
+                    <a href="#"><img src="../dm/images/zzlogo.jpg" class="img-responsive" alt="华胜未来北京科技有限公司"></a>
                 </div>
-
-                <div class="col-md-5 col-lg-6 col-xl-6" style="border: 1px solid red;">
-                    <form class="navbar form-inline my-2 my-lg-0 d-flex justify-content-end align-items-center">
-                        <input class="form-control mr-sm-10" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
+                    <form class="navbar-form navbar-left navbar-search" role="search">
+<!--                        <div class="form-group">-->
+                            <input type="text" class="search-query form-control" placeholder="有种放学别走！！">
+                        
+                        <button type="submit" class="btn btn-default">搜索</button>
+<!--                        </div>-->
                     </form>
                 </div>
-
-
-            </div>
-        </div>
-
-
-
-        <div class="container navbar-expand-sm ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cfnavbar" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="cfnavbar">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active mr-2">
-                        <a class="nav-link" href="#shouye">网站首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">联系我们</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#goods" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            产品介绍
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Action</a>
-                            <a class="dropdown-item" href="">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#news" tabindex="-1" aria-disabled="true">新闻中心</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">联系我们</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">联系我们</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer">联系我们</a>
-                    </li>
-                </ul>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4"><div class="tel">联系我们：010-51652205</div></div>
 
             </div>
         </div>
-    </nav>
+
+
+        <div id="menubg">
+            <div class="container">
+               
+<!--
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>               
+-->
+               
+               
+               
+                <a href="#nav" class="open toggle-btn"><i class="fa fa-bars fa-fw"></i></a>
+<!--                <a href="#top" class="close toggle-btn"><i class="fa fa-times-circle fa-fw" aria-hidden="true"></i></a>-->
+                
+                <nav class="navbar navbar-expand-lg navbar-light jumpnav">
+                   <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li><a href="#" class="active"><i class="fa fa-home fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 网站首页</a></li>
+                        <li><a href="#about"><i class="fa fa-book fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 公司介绍</a></li>
+
+                        
+<li class="dropdown">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-database fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 产品介绍<span class="caret"></span>
+        </a>
+                  
+
+                           
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/shop/oracle/">ORACLE </a></li>
+                                <li><a class="dropdown-item" href="/shop/chaozuoxitong/">操作系统</a> </li>
+                                <li><a class="dropdown-item" href="/shop/shujuku/">数据库及中间件</a></li>
+                                <li><a class="dropdown-item" href="/shop/shadu/">杀毒软件</a></li>
+                                <li><a class="dropdown-item" href="/shop/bangong/">办公和OA自动化</a></li>
+                                <li><a class="dropdown-item" href="/shop/kaifa/">开发工具</a></li>
+                                <div class="dropdown-divider"></div>
+                                <li><a class="dropdown-item" href="/shop/shuangji/">双机容错及备份软件</a></li>
+                                <li><a class="dropdown-item" href="/shop/tuxiang/">图像处理</a></li>
+                                <li><a class="dropdown-item" href="/shop/wangye/">网页制作</a> </li>
+                                <li><a class="dropdown-item" href="/shop/caiwu/">财务及管理软件</a></li>
+                                <li><a class="dropdown-item" href="/shop/anfang/">安防及入侵检测</a></li>
+                                <li><a class="dropdown-item" href="/shop/wangguan/">网管软件</a></li>
+                                <li><a class="dropdown-item" href="/shop/youjian/">邮件管理软件</a></li>
+                                <div class="dropdown-divider"></div>
+                                <li><a class="dropdown-item" href="/shop/jiankong/">网络监控软件</a></li>
+                                <li><a class="dropdown-item" href="/shop/3d/">建筑3D及机械制图</a></li>
+                                <li><a class="dropdown-item" href="/shop/faiban/">排版和辅助设计</a> </li>
+                                <li><a class="dropdown-item" href="/shop/duomeiti/">多媒体软件</a></li>
+                                <li><a class="dropdown-item" href="/shop/adobe/">ADOBE</a></li>
+                                <li><a class="dropdown-item" href="/shop/bea/">BEA</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/news/" target="_self"><i class="fa fa-newspaper-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 新闻资讯</a></li>
+                        <li><a href="/wl.html" target="_self"><i class="fa fa-globe fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 营销网络</a></li>
+                        <li><a href="/hr.html" target="_self"><i class="fa fa-user-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 人才招聘</a></li>
+                        <li><a href="/e/tool/gbook/?bid=1" target="_self"><i class="fa fa-envelope fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 信息反馈</a></li>
+                        <li><a href="/fuwu.html" target="_self"><i class="fa fa-handshake-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 客户服务</a></li>
+                    </ul></div>
+                
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <!--------------------头部-end------------------------------>
 
-
     <!--我们的团队开始-->
-    <section id="shouye">
-        <div class="text-center mt-4 mb-4">
+    <section id="shouye" class="py-5">
+        <div class="text-center">
             <h3 class="animated heartBeat"><strong>我们的团队-首页</strong></h3>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row py-3">
                 <div class="col-md-12">
 
                     <ul class="nav nav-pills justify-content-center filter">
@@ -219,11 +230,11 @@
     <!--卡片组演示开始-产品介绍goods-->
     <section id="goods">
         <div class="container">
-            <div class="text-center mt-4 mb-4">
+            <div class="text-center pb-5">
                 <h3><strong>产品介绍goods</strong></h3>
             </div>
             <div class="row">
-                <div class="card-deck mb-3">
+                <div class="card-deck">
 
                     <div class="card">
                         <img class="card-img-top animated flipInY" src="../dm/images/girls.jpg" alt="">
@@ -259,8 +270,8 @@
     <!--卡片组演示结束-->
 
     <!--新闻中心开始-->
-    <section id="news" class="mb-5">
-        <div class="mt-4 mb-4">
+    <section id="news" class="py-5">
+        <div class="pb-4">
             <h3 class="text-center"><strong>新闻中心</strong></h3>
         </div>
 
@@ -344,7 +355,7 @@
     <!--新闻中心结束-->
 
     <!--   带页脚的卡片组演示开始-->
-    <section id="course">
+    <section id="course" class="py5">
         <div class="container">
             <div class="row">
                 <div class="card-deck mb-3 object-non-visiable" data-animation-effect="fadeIn">
@@ -390,7 +401,7 @@
 
 
     <!--尾部开始-->
-    <footer id="footer" class="">
+    <footer id="footer" class="mt-4">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-md-4 d-none d-lg-block">

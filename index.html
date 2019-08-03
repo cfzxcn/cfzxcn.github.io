@@ -1,27 +1,22 @@
 <!doctype html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../dm/bootstrap-4.3.1-dist/css/bootstrap.css">
-    <title>git测试h5bp72bs4</title>
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <title>BS4完美导航</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!--
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
--->
+    -->
     <!-- Place favicon.ico in the root directory -->
-
-    <!--    <link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/maintemp.css">
-    <link rel="stylesheet" href="css/s.min.css">
     <link rel="stylesheet" href="../dm/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--    <meta name="theme-color" content="#fafafa">-->
+    <!--<meta name="theme-color" content="#fafafa">-->
 </head>
-
 <body data-spy="scroll">
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -30,25 +25,31 @@
    一、仿：https://ke.qq.com/webcourse/index.html#cid=260203&term_id=100306775&taid=1761250124232811&type=1024&vid=s1422nfoxbr ，图集及弹出模态框，原效果：file:///F:/dm/Bootstrap%20%E4%B8%87%E5%92%8C%E6%BA%90%E7%A0%81/project/index.html，
    二、animate特效，下载最新animate.css，chrome大部分感觉不支持，傲游和360极速生效
    三、通过在class上添加 object-non-visiable" data-animation-effect="fadeIn ，以及和JS和2个CSS样式的配合，实现淡入延迟效果。
-
+   四、19年8月1日，通宵完成了最完美的导航，除忘记怎么控制高度外，有空再解决此问题
+   五、19年8月4日凌晨，完成当滚动滚动条时，菜单栏上方LOGO及文字缩小的问题，另外当缩小浏览器窗口时，也能完美缩小，现在只有active不生效了，经百度可能是页面名称及A链接不相符的问题
                 -->
     <!--------------------头部-begin------------------------------>
-    <div class="cfblock">测试scss</div>
-
-
-    <nav class="navbar navbar-light bg-light fixed-top">
-        <div class="container" style="border: 1px solid silver;">
-            <div class="row" style="border: 1px solid purple;">
-
-                <div class="col-md-7 col-lg-6 col-xl-6" style="border: 1px solid olive;">
-                    <a class="navbar-brand" href="" style="min-width: 196px;"><img src="../dm/images/zzlogo.jpg" alt="华胜未来北京科技有限公司" class="animated fadeInDownBig"></a>
+<header class="fixed-top">
+    <nav class="navbar navbar-dark bg-cfwhite">
+        <div class="container cf-my-2">
+            <div class="row">
+                <div class="col-md-9 col-lg-7 col-xl-6 d-flex align-items-center">
+                    <div class="logo">
+                        <a class="navbar-brand" href=""><img src="images/zzlogo.jpg" alt="华胜未来北京科技有限公司"></a>
+                    </div>
+                    <div>
+                        <div class="site-name">华胜未来北京科技有限公司</div>
+                        <div class="site-slogan">中国软件分销行业领导品牌</div>
+                    </div>
                 </div>
 
-                <div class="col-md-5 col-lg-6 col-xl-6" style="border: 1px solid red;">
+                <div class="col-md-3 col-lg-5 col-xl-6">
+                    <!--
                     <form class="navbar form-inline my-2 my-lg-0 d-flex justify-content-end align-items-center">
                         <input class="form-control mr-sm-10" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
+-->
                 </div>
 
 
@@ -56,59 +57,82 @@
         </div>
 
 
+        <div id="menubg">
+            <div class="container navbar-expand-md">
+                <div class="row">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cfnavbar" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        <div class="container navbar-expand-sm ">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cfnavbar" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="cfnavbar">
+                        <ul class="navbar-nav ml-3 ml-sm-1">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/index.html">网站首页 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about.html">关于我们</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#product" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    产品介绍
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/shop/oracle/">ORACLE </a>
+                                    <a class="dropdown-item" href="/shop/chaozuoxitong/">操作系统</a>
+                                    <a class="dropdown-item" href="/shop/shujuku/">数据库及中间件</a>
+                                    <a class="dropdown-item" href="/shop/shadu/">杀毒软件</a>
+                                    <a class="dropdown-item" href="/shop/bangong/">办公和OA自动化</a>
+                                    <a class="dropdown-item" href="/shop/kaifa/">开发工具</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/shop/shuangji/">双机容错及备份软件</a>
+                                    <a class="dropdown-item" href="/shop/tuxiang/">图像处理</a>
+                                    <a class="dropdown-item" href="/shop/wangye/">网页制作</a>
+                                    <a class="dropdown-item" href="/shop/caiwu/">财务及管理软件</a>
+                                    <a class="dropdown-item" href="/shop/anfang/">安防及入侵检测</a>
+                                    <a class="dropdown-item" href="/shop/wangguan/">网管软件</a>
+                                    <a class="dropdown-item" href="/shop/youjian/">邮件管理软件</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/shop/jiankong/">网络监控软件</a>
+                                    <a class="dropdown-item" href="/shop/3d/">建筑3D及机械制图</a>
+                                    <a class="dropdown-item" href="/shop/faiban/">排版和辅助设计</a>
+                                    <a class="dropdown-item" href="/shop/duomeiti/">多媒体软件</a>
+                                    <a class="dropdown-item" href="/shop/adobe/">ADOBE</a>
+                                    <a class="dropdown-item" href="/shop/bea/">BEA</a>
 
-            <div class="collapse navbar-collapse" id="cfnavbar">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active mr-2">
-                        <a class="nav-link" href="#shouye">网站首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">联系我们</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#goods" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            产品介绍
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">Action</a>
-                            <a class="dropdown-item" href="">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#news" tabindex="-1" aria-disabled="true">新闻中心</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">联系我们</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">联系我们</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#footer">联系我们</a>
-                    </li>
-                </ul>
-
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#news" tabindex="-1" aria-disabled="true">企业动态</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/hr.html">人才招聘</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/network.html">营销网络</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footer">联系我们</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline  ml-3 my-sm-2 ml-sm-2 mx-md-n4 mx-lg-0 justify-content-end">
+                            <input class="form-control mr-sm-1 ml-md-n5 ml-lg-0" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-warning my-2 my-sm-0 ml-1" type="submit">搜索</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
-
+</header>
     <!--------------------头部-end------------------------------>
 
-
     <!--我们的团队开始-->
-    <section id="shouye">
-        <div class="text-center mt-4 mb-4">
+    <section id="shouye" class="py-5">
+        <div class="text-center">
             <h3 class="animated heartBeat"><strong>我们的团队-首页</strong></h3>
         </div>
         <div class="container">
-            <div class="row">
+            <div class="row py-3">
                 <div class="col-md-12">
 
                     <ul class="nav nav-pills justify-content-center filter">
@@ -135,7 +159,7 @@
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso1">
 
                         <div class="card overlay-container" style="width: rem;">
-                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="">
+                            <img class="card-img-top" src="images/200girl.jpg" alt="">
                             <div class="card-body">
                                 <a href="#" class="overlay" data-toggle="modal" data-target="#Modal1">
                                     <i class="fa fa-search-plus"></i>
@@ -181,7 +205,7 @@
                     </div>
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso2">
                         <div class="card" style="width: rem;">
-                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/200girl.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <a href="">
                                     <h5 class="card-title text-center">红旗Linux市场部</h5>
@@ -191,7 +215,7 @@
                     </div>
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso3">
                         <div class="card" style="width: rem;">
-                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/200girl.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <a href="">
                                     <h5 class="card-title text-center">Ubuntu研发部</h5>
@@ -201,7 +225,7 @@
                     </div>
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-1 iso1">
                         <div class="card" style="width: rem;">
-                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="">
+                            <img class="card-img-top" src="images/200girl.jpg" alt="">
                             <div class="card-body">
                                 <a href="">
                                     <h5 class="card-title text-center">Red Hat Linux工程部</h5>
@@ -219,14 +243,14 @@
     <!--卡片组演示开始-产品介绍goods-->
     <section id="goods">
         <div class="container">
-            <div class="text-center mt-4 mb-4">
+            <div class="text-center pb-5">
                 <h3><strong>产品介绍goods</strong></h3>
             </div>
             <div class="row">
-                <div class="card-deck mb-3">
+                <div class="card-deck">
 
                     <div class="card">
-                        <img class="card-img-top animated flipInY" src="../dm/images/girls.jpg" alt="">
+                        <img class="card-img-top animated flipInY" src="images/girls.jpg" alt="">
                         <div class="card-body">
                         </div>
                         <div class="card-footer">
@@ -235,7 +259,7 @@
                     </div>
 
                     <div class="card">
-                        <img class="card-img-top animated zoomIn" src="../dm/images/girls.jpg" alt="">
+                        <img class="card-img-top animated zoomIn" src="images/girls.jpg" alt="">
                         <div class="card-body">
                         </div>
                         <div class="card-footer">
@@ -244,7 +268,7 @@
                     </div>
 
                     <div class="card">
-                        <img class="card-img-top animated lightSpeedIn" src="../dm/images/girls.jpg" alt="">
+                        <img class="card-img-top animated lightSpeedIn" src="images/girls.jpg" alt="">
                         <div class="card-body">
                         </div>
                         <div class="card-footer">
@@ -259,8 +283,8 @@
     <!--卡片组演示结束-->
 
     <!--新闻中心开始-->
-    <section id="news" class="mb-5">
-        <div class="mt-4 mb-4">
+    <section id="news" class="py-5">
+        <div class="pb-4">
             <h3 class="text-center"><strong>新闻中心</strong></h3>
         </div>
 
@@ -344,12 +368,12 @@
     <!--新闻中心结束-->
 
     <!--   带页脚的卡片组演示开始-->
-    <section id="course">
+    <section id="course" class="py5">
         <div class="container">
             <div class="row">
                 <div class="card-deck mb-3 object-non-visiable" data-animation-effect="fadeIn">
                     <div class="card">
-                        <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                        <img class="card-img-top" src="images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Card title1</h5>
 
@@ -359,7 +383,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                        <img class="card-img-top" src="images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
                         <div class="card-body">
                             <h5 class="card-title text-center">Card title2</h5>
 
@@ -370,7 +394,7 @@
                     </div>
 
                     <div class="card">
-                        <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                        <img class="card-img-top" src="images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Card title2</h5>
 
@@ -390,7 +414,7 @@
 
 
     <!--尾部开始-->
-    <footer id="footer" class="">
+    <footer id="footer" class="mt-4">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-md-4 d-none d-lg-block">
@@ -422,8 +446,8 @@
                 </div>
                 <div class="col-md-6 col-lg-3 d-none d-sm-none d-md-block">
                     <h6>联系我们</h6>
-                    <a href=""><img src="../dm/images/weixin-h.png" width="50" alt="" data-toggle="tooltip" data-placement="bottom" title="微信号：shetuan02"></a>
-                    <a href=""><img src="../dm/images/xinlang-h.png" width="50" alt="" data-placement="bottom" data-toggle="tooltip" title="微博：华胜未来"></a>
+                    <a href=""><img src="images/weixin-h.png" width="50" alt="" data-toggle="tooltip" data-placement="bottom" title="微信号：shetuan02"></a>
+                    <a href=""><img src="images/xinlang-h.png" width="50" alt="" data-placement="bottom" data-toggle="tooltip" title="微博：华胜未来"></a>
                 </div>
             </div>
         </div>
@@ -431,11 +455,9 @@
     <!--尾部结束-->
     <!--    <script src="js/vendor/modernizr-3.7.1.min.js"></script>-->
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
-
     <script src="js/plugins.js"></script>
-
     <script src="js/vendor/popper.js"></script>
-    <script src="../dm/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/main.js"></script>
     <script>

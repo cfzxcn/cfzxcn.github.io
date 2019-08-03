@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@mixin bgc($tgbc){
+    background-color: $tgbc;
+}
+@mixin color($tc){
+    color: $tc;
+}
+@mixin linestyle($tls){
+    border-style: $tls;
+}
+@mixin linewidth($clw){
+    border-width: $clw;
+}
+$fz18:18px;
+
+.cfblock {
+    @include linestyle(dotted);
+    @include color(purple);
+    @include linewidth(2px);
+    @include bgc(olive);
+    font-size: $fz18;
+}
