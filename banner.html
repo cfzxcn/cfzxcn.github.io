@@ -1,125 +1,173 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html class="no-js" lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
-    <title>BS4完美导航</title>
+    <title>BS4-banner</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
-    -->
+
     <!-- Place favicon.ico in the root directory -->
-    <!--<link rel="stylesheet" href="css/normalize.css">-->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <!--如使用animate.css 动画效果不生效，不知为何   -->
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/maintemp.css">
-    <link rel="stylesheet" href="../dm/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--<meta name="theme-color" content="#fafafa">-->
 </head>
+<!--2019年8月6日，轮播图制作完毕，使用了index.js中上部的JS及css配合，问题有2点，1、轮播图无法加载文字内容；2、在galaxy S5横屏测试，轮播上的三个指针无法正常显示。
+一、使用了index.js，替换了以前的main.js，因为main.js的公司产品样式JS少了$(function () {的包裹，所以导致之前的轮播无法正常展示，现2个JS文件都已完善。
+二、公司产品中增加2个style，搭配JS中（4. 超出内容处理）完成小屏下出现滚动条的功能
+-->
+
 <body>
-      <!--------------------头部-begin------------------------------>
-<header class="fixed-top">
-    <nav class="navbar navbar-dark bg-cfwhite">
-        <div class="container cf-my-2">
-            <div class="row">
-                <div class="col-md-9 col-lg-7 col-xl-6 d-flex align-items-center">
+    <!--向上功能开始-->
+    <div class="go-top">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+    </div>
+    <!--向上功能结束-->
+    <!--------------------头部-begin------------------------------>
+    <header class="fixed-top">
+        <nav class="navbar navbar-dark bg-cfwhite">
+            <div class="container cf-my-2">
+                <div class="row d-flex align-items-center">
+                    <!--                    <div class="col-md-9 col-lg-7 col-xl-6 ">-->
                     <div class="logo">
-                        <a class="navbar-brand" href=""><img src="images/zzlogo.jpg" alt="华胜未来北京科技有限公司"></a>
+                        <a class="navbar-brand" href="/"><img src="images/zzlogo.jpg" alt="华胜未来北京科技有限公司" class="img-fluid"></a>
                     </div>
                     <div>
-                        <div class="site-name">华胜未来北京科技有限公司</div>
-                        <div class="site-slogan">中国软件分销行业领导品牌</div>
+                        <div class="site-name d-none d-sm-block">华胜未来北京科技有限公司</div>
+                        <div class="site-slogan d-none d-sm-block">中国软件增值服务领导品牌</div>
                     </div>
+                    <!--                    </div>-->
+
+
+
+
                 </div>
-
-                <div class="col-md-3 col-lg-5 col-xl-6">
-                    <!--
-                    <form class="navbar form-inline my-2 my-lg-0 d-flex justify-content-end align-items-center">
-                        <input class="form-control mr-sm-10" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
--->
-                </div>
-
-
             </div>
-        </div>
 
 
-        <div id="menubg">
-            <div class="container navbar-expand-md">
-                <div class="row">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cfnavbar" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <div id="menubg">
+                <div class="container navbar-expand-md">
+                    <div class="row">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cfnavbar" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                    <div class="collapse navbar-collapse justify-content-center" id="cfnavbar">
-                        <ul class="navbar-nav ml-3 ml-sm-1">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/index.html">网站首页 <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/about.html">关于我们</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#product" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    产品介绍
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/shop/oracle/">ORACLE </a>
-                                    <a class="dropdown-item" href="/shop/chaozuoxitong/">操作系统</a>
-                                    <a class="dropdown-item" href="/shop/shujuku/">数据库及中间件</a>
-                                    <a class="dropdown-item" href="/shop/shadu/">杀毒软件</a>
-                                    <a class="dropdown-item" href="/shop/bangong/">办公和OA自动化</a>
-                                    <a class="dropdown-item" href="/shop/kaifa/">开发工具</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/shop/shuangji/">双机容错及备份软件</a>
-                                    <a class="dropdown-item" href="/shop/tuxiang/">图像处理</a>
-                                    <a class="dropdown-item" href="/shop/wangye/">网页制作</a>
-                                    <a class="dropdown-item" href="/shop/caiwu/">财务及管理软件</a>
-                                    <a class="dropdown-item" href="/shop/anfang/">安防及入侵检测</a>
-                                    <a class="dropdown-item" href="/shop/wangguan/">网管软件</a>
-                                    <a class="dropdown-item" href="/shop/youjian/">邮件管理软件</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="/shop/jiankong/">网络监控软件</a>
-                                    <a class="dropdown-item" href="/shop/3d/">建筑3D及机械制图</a>
-                                    <a class="dropdown-item" href="/shop/faiban/">排版和辅助设计</a>
-                                    <a class="dropdown-item" href="/shop/duomeiti/">多媒体软件</a>
-                                    <a class="dropdown-item" href="/shop/adobe/">ADOBE</a>
-                                    <a class="dropdown-item" href="/shop/bea/">BEA</a>
+                        <div class="collapse navbar-collapse justify-content-center" id="cfnavbar">
+                            <ul class="navbar-nav ml-3 ml-sm-1">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/index.html">网站首页 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">关于我们</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#product" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        产品介绍
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/shop/oracle/">ORACLE </a>
+                                        <a class="dropdown-item" href="/shop/chaozuoxitong/">操作系统</a>
+                                        <a class="dropdown-item" href="/shop/shujuku/">数据库及中间件</a>
+                                        <a class="dropdown-item" href="/shop/shadu/">杀毒软件</a>
+                                        <a class="dropdown-item" href="/shop/bangong/">办公和OA自动化</a>
+                                        <a class="dropdown-item" href="/shop/kaifa/">开发工具</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/shop/shuangji/">双机容错及备份软件</a>
+                                        <a class="dropdown-item" href="/shop/tuxiang/">图像处理</a>
+                                        <a class="dropdown-item" href="/shop/wangye/">网页制作</a>
+                                        <a class="dropdown-item" href="/shop/caiwu/">财务及管理软件</a>
+                                        <a class="dropdown-item" href="/shop/anfang/">安防及入侵检测</a>
+                                        <a class="dropdown-item" href="/shop/wangguan/">网管软件</a>
+                                        <a class="dropdown-item" href="/shop/youjian/">邮件管理软件</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/shop/jiankong/">网络监控软件</a>
+                                        <a class="dropdown-item" href="/shop/3d/">建筑3D及机械制图</a>
+                                        <a class="dropdown-item" href="/shop/faiban/">排版和辅助设计</a>
+                                        <a class="dropdown-item" href="/shop/duomeiti/">多媒体软件</a>
+                                        <a class="dropdown-item" href="/shop/adobe/">ADOBE</a>
+                                        <a class="dropdown-item" href="/shop/bea/">BEA</a>
 
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#news" tabindex="-1" aria-disabled="true">企业动态</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/hr.html">人才招聘</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/network.html">营销网络</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#footer">联系我们</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline  ml-3 my-sm-2 ml-sm-2 mx-md-n4 mx-lg-0 justify-content-end">
-                            <input class="form-control mr-sm-1 ml-md-n5 ml-lg-0" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-warning my-2 my-sm-0 ml-1" type="submit">搜索</button>
-                        </form>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#news" tabindex="-1" aria-disabled="true">企业动态</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/hr.html">人才招聘</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/network.html">营销网络</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">联系我们</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline  ml-3 my-sm-2 ml-sm-2 mx-md-n4 mx-lg-0 justify-content-end">
+                                <input class="form-control mr-sm-1 ml-md-n5 ml-lg-0" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-warning btn-sm my-2 my-sm-0 ml-1" type="submit">搜索</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
     <!--------------------头部-end------------------------------>
-  
-    <!--我们的团队开始-->
-    <section id="shouye" class="py-5">
-        <div class="text-center">
-            <h3 class="animated heartBeat"><strong>我们的团队-首页</strong></h3>
+
+
+    <!-- 轮播开始-->
+    <!--    要将原先图片的img代码删除，然后定义data-sm-img取得小图，data-lg-img取大图，然后在main.js中取得-->
+    <div id="cf_carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#cf_carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#cf_carousel" data-slide-to="1"></li>
+            <li data-target="#cf_carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-sm-img="images/a1s600.jpg" data-lg-img="images/a1.jpg">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>第1张图</h5>
+                    <p>我们的汉字呢？</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-sm-img="images/a3s600.jpg" data-lg-img="images/a3.jpg">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-sm-img="images/a4s600.jpg" data-lg-img="images/a4.jpg">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#cf_carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#cf_carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--轮播结束-->
+
+
+    <!--产品介绍开始-->
+    <section id="goods" class="py-5">
+        <div class="mb-3 d-flex justify-content-center">
+            <h3 class="pb-3 w-30 text-center"><strong>产品介绍</strong></h3>
         </div>
         <div class="container">
             <div class="row py-3">
@@ -228,25 +276,233 @@
             </div>
         </div>
     </section>
-    <!--我们的团队结束-->  
-  
-  
-  
-   
-     <!--    <script src="js/vendor/modernizr-3.7.1.min.js"></script>-->
+    <!--产品介绍结束-->
+
+
+
+
+    <!--合作伙伴开始-->
+    <section id="cf-friend" class="d-none d-md-block py-5">
+        <div class="mb-3 d-flex justify-content-center">
+            <h3 class="pb-3 w-30 text-center"><strong>合作伙伴</strong></h3>
+        </div>
+        <div class="container">
+            <div class="row d-flex justify-content-around align-items-center wow lightSpeedIn">
+                <a href=""><img src="images/200girl.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/al.png" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/mm.png" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/大蜘蛛 Dr.web反病毒.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/金山词霸2009(企业版.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/趋势科技防毒墙.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/200girlz.jpg" width="130" alt="" class="rounded-circle"></a>
+            </div>
+        </div>
+    </section>
+    <!--合作伙伴结束-->
+
+
+
+
+
+    <!--客户服务开始-->
+    <section id="service" class="py-5">
+
+        <div class="mb-3 d-flex justify-content-center">
+            <h3 class="pb-3 w-30 text-center"><strong>客户服务</strong></h3>
+        </div>
+        <div class="container">
+            <div class="row wow fadeInUp">
+                <div class="col-md-6 col-lg-4">
+
+                    <a href="">
+                        <div class="media bg-light m-1 p-2 cfoutline">
+                            <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girl.jpg" alt="" width="100">
+                            <div class="media-body">
+                                <h5 class="media-heading">韦小宝</h5>
+                                <p class="text-info"> Java工程师</p>
+                                <p class="text-muted">15年行业经验，精通Html5、css3、JavaScript、Jquery、Bootstrap框架、ThinkPhp框架，liunx服务器组建及维护！</p>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media bg-light m-1 p-2">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girl.jpg" alt="" width="110">
+                        <div class="media-body">
+                            <h5 class="mt-0 media-heading">韦小宝</h5>
+                            <p>WEB前端工程师</p>
+                            <p class="mb-0 text-muted">15年行业经验，精通Html5、css3、JavaScript、Jquery、Bootstrap框架、ThinkPhp框架，liunx服务器组建及维护！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media bg-light m-1 p-2">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girl.jpg" alt="" width="120">
+                        <div class="media-body">
+                            <h5 class="mt-0 media-heading">韦小宝</h5>
+                            <p>WEB前端工程师</p>
+                            <p class="mb-0 text-muted">15年行业经验，精通Html5、css3、JavaScript、Jquery、Bootstrap框架、ThinkPhp框架，liunx服务器组建及维护！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media bg-light m-1 p-2">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girl.jpg" alt="" width="140">
+                        <div class="media-body">
+                            <h5 class="mt-0 media-heading">韦小宝</h5>
+                            <p>WEB前端工程师</p>
+                            <p class="mb-0 text-muted">15年行业经验，精通Html5、css3、JavaScript、Jquery、Bootstrap框架、ThinkPhp框架，liunx服务器组建及维护！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media bg-light m-1 p-2">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girlz.jpg" alt="" width="130">
+                        <div class="media-body">
+                            <h5 class="mt-0 media-heading">任我行</h5>
+                            <p>WEB前端工程师</p>
+                            <p class="mb-0 text-muted">15年行业经验，精通Html5、css3、JavaScript、Jquery、Bootstrap框架、ThinkPhp框架，liunx服务器组建及维护！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="media bg-light m-1 p-2">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200200.jpg" alt="" width="120">
+                        <div class="media-body">
+                            <h5 class="mt-0 media-heading">向问天</h5>
+                            <p>WEB前端工程师</p>
+                            <p class="mb-0 text-muted">15年行业经验，精通Html5、css3、JavaScript、Jquery、Bootstrap框架、ThinkPhp框架，liunx服务器组建及维护！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--客户服务结束-->
+
+
+
+
+
+    <!--关于我们开始-->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="mb-3 d-flex justify-content-center">
+                <h3 class="pb-3 w-30 text-center"><strong>关于我们</strong></h3>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4 wow fadeInLeft text-center text-lg-left">
+                    <h1 class="cf-uppercase display-5 d-none d-lg-block">
+                        <p>chinakingsoft.</p>com.cn
+                    </h1>
+                    <h4 class="my-3">华胜未来™</h4>
+                    <p>Add.：北京市海淀区知春大厦A座903</p>
+                    <p>Tel：86-10-51652205</p>
+                    <p>Email：yitang@chinakingsoft.com.cn</p>
+                    <p>Wechat：533361513</p>
+                </div>
+                <div class="col-lg-7 mb-3 mb-md-0 wow fadeInRight  data-wow-duration=" 0s" data-wow-delay="0.5s"">
+                               <div class=" accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link font-weight-light" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    介绍
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body text-justify">
+                                华胜未来北京科技有限公司是业界领先的高端软件增值服务供应商，总部位于北京。公司成立于2002年2月3日，经过多年来的稳定积累形成了庞大的营销体系。在军队、金融、保险、邮电、劳动与社会保障、石油、铁路、财政等行业打下了深厚的基础，赢得了宝贵的行业资源和丰富的实施应用经验，从公司成立之初至今，我们与业界各大著名厂商保持着紧密的合作关系，如：大蜘蛛软件的华北总代理，辐射（北京，天津，河北，河南，山西，山东，内蒙，东三省），微软核心代理商，ORACLE、IBM、CA等厂商在中国的重要合作伙伴。为各行业用户提供丰富的软件产品、应用开发、解决方案以及全方位的专业技术服务。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed font-weight-light" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    历程
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body text-justify">
+                                华胜未来目前拥有大蜘蛛事业部，微软事业部，毒霸事业部，电子商务事业部，五位各国际知名厂商的认证工程师，形成了从工程师、高级工程师到技术顾问的完善技术梯队，秉承“专业专注、主动服务”的技术服务理念，为全国各行业客户提供专业技术服务。
+
+                                十年辉煌路，华胜未来又开始了新的征途。
+
+                                承前启后，华胜未来将继续专注并投资于高科技产业，通过对资本和高技术的有效整合，以实现客户满意最大化和企业效益最大化，并用业绩来回报客户、员工和社会。
+
+                                继往开来，华胜未来将与国内外众多合作伙伴一起，携手服务中国信息化建设，精益求精，脚踏实地！共同进步，共享丰盛！
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!--关于我们结束-->
+
+
+
+
+
+    <footer>
+        <container>
+            <row>
+                <!--              <div class="col-md-3"></div>-->
+                <div class="col-lg-6 text-center" style="background: skyblue;">Copyright&copy;2002-2019&nbsp;&nbsp;华胜未来北京科技有限公司
+                    <!--               <span><a href="http://www.miitbeian.gov.cn" target="_blank">京ICP备18063685号</a>&nbsp;&nbsp;&nbsp;&nbsp;技术支持：摄团</span>-->
+                </div>
+
+
+
+                <div class="col-lg-6 text-md-center" style="background: red;"><a href="http://www.miitbeian.gov.cn" target="_blank">京ICP备18063685号</a>&nbsp;&nbsp;&nbsp;&nbsp;技术支持：摄团</div>
+                <!--               <div class="col-md-3"></div>-->
+            </row>
+        </container>
+    </footer>
+    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="js/plugins.js"></script>
+    <!--        <script src="js/plugins.js"></script>-->
     <script src="js/vendor/popper.js"></script>
     <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <!--    控制 我们的团队 动态切换 特效-->
     <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/main.js"></script>
+    <!--    <script src="js/main.js"></script>-->
+    <script src="js/index.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
     <script>
+        /*轮播图切换速度调节*/
+        $('.carousel').carousel({
+            interval: 2000
+        })
+        /*导航跳转效果插件*/
+        $('.navbar').singlePageNav({
+            offset: 150
+        });
+
         $(function() {
             /*小屏幕导航点击关闭菜单，成功！*/
             $('.navbar-collapse a').click(function() {
                 $('.navbar-collapse').collapse('hide');
             });
+
+            //启用wow，否则页面不显示wow和animate配合的动画效果    
+            new WOW().init();
         })
-    </script>   
-</body>
-</html>
+    </script>
+</body></html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../dm/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
     <title>h5bp72bs4</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +13,9 @@
     <!-- Place favicon.ico in the root directory -->
 
 <!--    <link rel="stylesheet" href="css/normalize.css">-->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="../dm/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -27,14 +27,16 @@
    一、满意的效果插件：单页面导航插件，学自：https://www.php.cn/code/28864.html ，file:///F:/dm/bootstrap%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/1.%E8%87%AA%E9%80%82%E5%BA%94%E4%BC%81%E4%B8%9A%E5%AE%98%E7%BD%91demo/index.html ，以前不生效今天成功了！主要是解决在页头固定导航条后body给了一个padding-top值，然后不易定位的问题，页面中导入这个插件后，在页面底部再增加一段JS，其中 offset: 150，这个150就是body的padding-top的值，现在完美定位了，在本目录下temp.html中使用了手动的方法实现定位，但感觉还是用插件容易！
    二、小菜单时单击菜单项JS使用成功，见页尾。
    三、WOW和animate插件结合使用成功，但chrome无效，且有些卡顿！-->
-    <header class="fixed-top">
+   
+<!--这里不加这2个:navbar-light bg-light ,可能导致会显示下面的内容   -->
+    <header class="fixed-top navbar-light bg-light">
         <!--header上部beginning-->
         <div class="container">
 
             <div class="row d-flex justify-content-center align-items-center no-gutters mt-2 mb-2">
                 <div class="col-5 col-lg-4 col-xl-5">
                     <div class="navbar-brand">
-                        <a href="#"><img src="../dm/images/zzlogo.jpg" alt="华胜未来北京科技有限公司"></a>
+                        <a href="#"><img src="images/zzlogo.jpg" alt="华胜未来北京科技有限公司"></a>
                     </div>
                     <div class="navbar-text">
                         <div class="site-name hidden-xs"><a href="#">华胜未来北京科技有限公司</a>
@@ -105,7 +107,7 @@
                             <li class="nav-item cfweixin">
                                 <a class="nav-link" href="http://blog.koalite.com/bbg/"><i class="icon-phone"></i>
                                     <span>微信号</span>
-                                    <img src="../dm/images/qrcode.jpg" alt="" style="width: 130px;">
+                                    <img src="images/qrcode.jpg" alt="" style="width: 130px;">
                                 </a>
                             </li>
                         </ul>
@@ -126,15 +128,15 @@
             <li data-target="#cf-carousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" data-sm-img="../dm/images/a4s600.jpg" data-lg-img="../dm/images/a4.jpg">
+            <div class="carousel-item active" data-sm-img="images/a4s600.jpg" data-lg-img="images/a4.jpg">
 
 
             </div>
-            <div class="carousel-item" data-sm-img="../dm/images/a3s600.jpg" data-lg-img="../dm/images/a3.jpg">
+            <div class="carousel-item" data-sm-img="images/a3s600.jpg" data-lg-img="images/a3.jpg">
 
 
             </div>
-            <div class="carousel-item" data-sm-img="../dm/images/a1s600.jpg" data-lg-img="../dm/images/a1.jpg">
+            <div class="carousel-item" data-sm-img="images/a1s600.jpg" data-lg-img="images/a1.jpg">
 
 
             </div>
@@ -162,7 +164,7 @@
                 <div class="col-md-6 col-lg-4">
 
                     <a href=""><div class="media bg-light m-1 p-2 cfoutline">
-                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="../dm/images/200girl.jpg" alt="" width="100">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girl.jpg" alt="" width="100">
                         <div class="media-body">
                             <h5 class="media-heading">韦小宝</h5>
                             <p class="text-info"> Java工程师</p>
@@ -175,7 +177,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="media bg-light m-1 p-2">
-                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="../dm/images/200girl.jpg" alt="" width="110">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girl.jpg" alt="" width="110">
                         <div class="media-body">
                             <h5 class="mt-0 media-heading">韦小宝</h5>
                             <p>WEB前端工程师</p>
@@ -185,7 +187,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="media bg-light m-1 p-2">
-                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="../dm/images/200girl.jpg" alt="" width="120">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girl.jpg" alt="" width="120">
                         <div class="media-body">
                             <h5 class="mt-0 media-heading">韦小宝</h5>
                             <p>WEB前端工程师</p>
@@ -195,7 +197,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="media bg-light m-1 p-2">
-                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="../dm/images/200girl.jpg" alt="" width="140">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girl.jpg" alt="" width="140">
                         <div class="media-body">
                             <h5 class="mt-0 media-heading">韦小宝</h5>
                             <p>WEB前端工程师</p>
@@ -205,7 +207,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="media bg-light m-1 p-2">
-                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="../dm/images/200girlz.jpg" alt="" width="130">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girlz.jpg" alt="" width="130">
                         <div class="media-body">
                             <h5 class="mt-0 media-heading">任我行</h5>
                             <p>WEB前端工程师</p>
@@ -215,7 +217,7 @@
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="media bg-light m-1 p-2">
-                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="../dm/images/200200.jpg" alt="" width="120">
+                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200200.jpg" alt="" width="120">
                         <div class="media-body">
                             <h5 class="mt-0 media-heading">向问天</h5>
                             <p>WEB前端工程师</p>
@@ -282,7 +284,7 @@
                                     <p class="text-success">四十年来家国，三千里地山河。凤阁龙楼连霄汉，玉树琼枝作烟萝，几曾识干戈？
                                         一旦归为臣虏，沈腰潘鬓消磨。最是仓皇辞庙日，教坊犹奏别离歌，垂泪对宫娥。</p>
                                 </div>
-                                <div class="col-md-4 wow fadeInRight"><img src="../dm/images/wgd.jpg" alt="" class="img-fluid d-block d-sm-none d-md-block rounded"></div>
+                                <div class="col-md-4 wow fadeInRight"><img src="images/wgd.jpg" alt="" class="img-fluid d-block d-sm-none d-md-block rounded"></div>
                             </div>
                         </div>
 
@@ -313,7 +315,7 @@
                             <div class="row">
                                 <div class="col-md-6 col-lg-4">
                                     <div class="media bg-light m-1 p-2">
-                                        <img class="align-self-center mr-3 rounded-circle img-thumbnail img-fluid" src="../dm/images/200girl.jpg" alt="" width="120">
+                                        <img class="align-self-center mr-3 rounded-circle img-thumbnail img-fluid" src="images/200girl.jpg" alt="" width="120">
                                         <div class="media-body">
                                             <h5 class="mt-0 media-heading">韦小宝</h5>
                                             <p>WEB前端工程师</p>
@@ -323,7 +325,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-4">
                                     <div class="media bg-light m-1 p-2">
-                                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="../dm/images/200girlz.jpg" alt="" width="130">
+                                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200girlz.jpg" alt="" width="130">
                                         <div class="media-body">
                                             <h5 class="mt-0 media-heading">任我行</h5>
                                             <p>WEB前端工程师</p>
@@ -333,7 +335,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-4">
                                     <div class="media bg-light m-1 p-2">
-                                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="../dm/images/200200.jpg" alt="" width="120">
+                                        <img class="align-self-center mr-3 rounded-circle img-thumbnail" src="images/200200.jpg" alt="" width="120">
                                         <div class="media-body">
                                             <h5 class="mt-0 media-heading">向问天</h5>
                                             <p>WEB前端工程师</p>
@@ -347,7 +349,7 @@
                     </div>
                     <div class="tab-pane fade" id="cfpd" role="tabpanel" aria-labelledby="cfpd-tab">山一程，水一程，身向榆关那畔行，夜深千帐灯。
                         风一更，雪一更，聒碎乡心梦不成，故园无此声。
-                        <p class="mt-4"><img src="../dm/images/twogrils.jpg" alt="" class="img-fluid rounded-circle"></p>
+                        <p class="mt-4"><img src="images/twogrils.jpg" alt="" class="img-fluid rounded-circle"></p>
                     </div>
 
 
@@ -380,7 +382,7 @@
                         <div class="row  wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="1s">
 
                             <div class="media col-md-6 col-xl-4">
-                                <img class="img-fluid rounded align-self-center mr-3" src="../dm/images/200girl.jpg" alt="Generic placeholder image">
+                                <img class="img-fluid rounded align-self-center mr-3" src="images/200girl.jpg" alt="Generic placeholder image">
                                 <div class="media-body">
                                     <h5 class="mt-0">画堂春</h5>
                                     <p>一生一代一双人，争教两处销魂。相思相望不相亲，天为谁春？ 浆向蓝桥易乞，药成碧海难奔。若容相访饮牛津，相对忘贫。</p>
@@ -388,7 +390,7 @@
                             </div>
 
                             <div class="media col-md-6 col-xl-4">
-                                <img class="mx-auto img-thumbnail align-self-center mr-3" src="../dm/images/200girl.jpg" alt="Generic placeholder image">
+                                <img class="mx-auto img-thumbnail align-self-center mr-3" src="images/200girl.jpg" alt="Generic placeholder image">
                                 <div class="media-body">
                                     <h5 class="mt-0">黍离</h5>
                                     <p>彼黍离离，彼稷之穗。行迈靡靡，中心如醉。知我者，谓我心忧；不知我者，谓我何求。悠悠苍天，此何人哉？
@@ -397,7 +399,7 @@
                             </div>
 
                             <div class="media col-md-6 col-xl-4">
-                                <img class="img-thumbnail align-self-center mr-3" src="../dm/images/200girl.jpg" alt="Generic placeholder image">
+                                <img class="img-thumbnail align-self-center mr-3" src="images/200girl.jpg" alt="Generic placeholder image">
                                 <div class="media-body">
                                     <h5 class="mt-0">黍离</h5>
                                     <p>彼黍离离，彼稷之实。行迈靡靡，中心如噎。知我者，谓我心忧；不知我者，谓我何求。悠悠苍天，此何人哉？</p>
@@ -466,7 +468,7 @@
 
             <div class="card-group  wow fadeInUp">
                 <div class="card">
-                    <img class="card-img-top" src="../dm/images/sh.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/sh.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title text-center">画堂春</h5>
                         <p class="card-text"></p>
@@ -474,7 +476,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="../dm/images/sh.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/sh.jpg" alt="Card image cap">
                     <div class="card-body text-center">
                      <button class="btn btn-primary">
                             <span class="glyphicon glyphicon-download-alt"></span>iPhone版
@@ -488,7 +490,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card-img-top" src="../dm/images/sh.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="images/sh.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text"></p>
@@ -501,12 +503,6 @@
     <!--最新产品结束-->
 
 
-    
-
-
-
-
-
 
     <!--公司介绍开始-->
     <section id="about">
@@ -515,14 +511,14 @@
                 <h3><strong>公司介绍</strong></h3>
             </div>
             <div class="row">
-                <div class="col-md-8 order-2 order-md-1 wow flipInY">
+                <div class="col-md-8 order-2 order-md-1 wow fadeInLeft">
                     <p class="muted">列偏移
 
                         使用 .col-md-offset-* 类可以将列向右侧偏移。这些类实际是通过使用 * 选择器为当前元素增加了左侧的边距（margin）。例如，.col-md-offset-4 类将 .col-md-4 元素向右侧偏移了4个列（column）的宽度。
 
                         学会用bootstrap的第一步呢，就是要撑握它的栅格布局。</p>
                 </div>
-                <div class="col-md-4 order-1 order-md-2 mb-3 mb-md-0 wow zoomIn"><img src="../dm/images/妙味课堂CSS3弹性盒模型2.png" alt="" class="img-fluid img-thumbnail"></div>
+                <div class="col-md-4 order-1 order-md-2 mb-3 mb-md-0 wow fadeInRight"><img src="images/妙味课堂CSS3弹性盒模型2.png" alt="" class="img-fluid img-thumbnail"></div>
             </div>
         </div>
     </section>
@@ -536,13 +532,13 @@
         </div>
         <div class="container">
             <div class="row d-flex justify-content-around align-items-center wow lightSpeedIn">
-                <a href=""><img src="../dm/images/200girl.jpg" width="130" alt="" class="rounded-circle"></a>
-                <a href=""><img src="../dm/images/al.png" width="130" alt="" class="rounded-circle"></a>
-                <a href=""><img src="../dm/images/mm.png" width="130" alt="" class="rounded-circle"></a>
-                <a href=""><img src="../dm/images/大蜘蛛 Dr.web反病毒.jpg" width="130" alt="" class="rounded-circle"></a>
-                <a href=""><img src="../dm/images/金山词霸2009(企业版.jpg" width="130" alt="" class="rounded-circle"></a>
-                <a href=""><img src="../dm/images/趋势科技防毒墙.jpg" width="130" alt="" class="rounded-circle"></a>
-                <a href=""><img src="../dm/images/200girlz.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/200girl.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/al.png" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/mm.png" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/大蜘蛛 Dr.web反病毒.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/金山词霸2009(企业版.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/趋势科技防毒墙.jpg" width="130" alt="" class="rounded-circle"></a>
+                <a href=""><img src="images/200girlz.jpg" width="130" alt="" class="rounded-circle"></a>
             </div>
         </div>
     </section>
@@ -581,8 +577,8 @@
                 </div>
                 <div class="col-md-6 col-lg-3 d-none d-sm-none d-md-block">
                     <h6>联系我们</h6>
-                    <a href=""><img src="../dm/images/weixin-h.png" width="50" alt="" data-toggle="tooltip" data-placement="bottom" title="微信号：shetuan02"></a>
-                    <a href=""><img src="../dm/images/xinlang-h.png" width="50" alt="" data-placement="bottom" data-toggle="tooltip" title="微博：华胜未来"></a>
+                    <a href=""><img src="images/weixin-h.png" width="50" alt="" data-toggle="tooltip" data-placement="bottom" title="微信号：shetuan02"></a>
+                    <a href=""><img src="images/xinlang-h.png" width="50" alt="" data-placement="bottom" data-toggle="tooltip" title="微博：华胜未来"></a>
                 </div>
             </div>
         </div>
@@ -607,7 +603,7 @@
     <script src="js/vendor/jquery-3.3.1.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/vendor/popper.js"></script>
-    <script src="../dm/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
     <script src="js/main.js"></script>
     <!--    singlePageNav和BS的二级导航有冲突，使用后，折叠菜单在小屏幕下无法打开，在temp.html文件中测试又没冲突，看来不是这里的问题-->
         <script src="js/jquery.singlePageNav.min.js"></script>
@@ -623,7 +619,8 @@
             $('.navbar-collapse a').click(function() {
                 $('.navbar-collapse').collapse('hide');
             });
-                    new WOW().init();
+            //启用wow，否则页面不显示wow和animate配合的动画效果 
+            new WOW().init();
         })
     </script>
 

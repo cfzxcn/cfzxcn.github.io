@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <title>BS4-banner</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    -->
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/animate.css">
+<!--    <link rel="stylesheet" href="//\css/maintemp.css">-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--<meta name="theme-color" content="#fafafa">-->
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                    Cras justo odio
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="jumbotron">
+                <h1 class="display-3">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <p class="lead">
+                    <a class="btn btn-radius btn-outline-success btn-sm" href="#" role="button">Learn more</a>
+                <button class="btn btn-outline-warning btn-sm my-2 my-sm-0 ml-1" type="submit">搜索</button>    
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <container>
+            <row class="text-center">
+                <div class="col-lg-6">华胜未来北京科技有限公司</div>
+                <div class="col-lg-6">技术支持：摄团</div>
+            </row>
+        </container>
+    </footer>
+
+
+
+    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="js/vendor/jquery-3.4.1.min.js"></script>
+    <!--        <script src="js/plugins.js"></script>-->
+    <script src="js/vendor/popper.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <!--    控制 我们的团队 动态切换 特效-->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!--    <script src="js/main.js"></script>-->
+    <script src="js/index.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+        /*导航跳转效果插件*/
+        $('.navbar').singlePageNav({
+            offset: 150
+        });
+
+        $(function() {
+            /*小屏幕导航点击关闭菜单，成功！*/
+            $('.navbar-collapse a').click(function() {
+                $('.navbar-collapse').collapse('hide');
+            });
+
+            //启用wow，否则页面不显示wow和animate配合的动画效果    
+            new WOW().init();
+        })
+    </script>
+
+</body></html>

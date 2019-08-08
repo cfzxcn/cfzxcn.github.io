@@ -16,7 +16,15 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+
+    font-family:sans-serif;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
 }
+
+
+
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -201,7 +209,7 @@ textarea {
 body {
     font-family: "微软雅黑";
     color: #333;
-    padding: 85px 0px 0px 0px;
+    padding: 60px 0px 0px 0px;
     margin: 0px;
     position: relative;
 }
@@ -209,13 +217,27 @@ body {
 a:link {
     text-decoration: none;
 }
-
-/*飞的公共样式end*/
+a:hover {
+    color: #1995c9;
+}
 /*
-section#shouye {
-    padding: 25px 0px;
+img {
+    max-width: 100%;
 }
 */
+section#about {
+    background-color: #1f2024;
+}
+section#cf-friend {
+/*    background-color: #1f2024;*/
+}
+section#shouye {
+    background-color: #f7f1db;
+}
+section#service {
+    background-color: #f0f0f0;
+}
+
 section#goods {
     background: #f8f8f8;
 
@@ -233,6 +255,56 @@ input[type="search"] {
     /*    margin-right: 5px;*/
 }
 
+/*向上功能开始*/
+div.go-top {
+    display: none;
+    opacity: 0.6;
+    z-index: 999999;
+    position: fixed;
+    bottom: 113px;
+    left: 90%;
+    margin-left: 40px;
+    border: 1px solid #fff;
+    width: 38px;
+    height: 38px;
+    background-color: #1995c9;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+div.go-top:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+div.go-top div.arrow {
+    position: absolute;
+    left: 9px;
+    top: -1px;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom-color: #fff;
+}
+
+div.go-top div.stick {
+    position: absolute;
+    left: 14px;
+    top: 15px;
+    width: 8px;
+    height: 14px;
+    display: block;
+    background-color: #fff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+
+/*向上功能结束*/
+
+
+
+/*飞的公共样式end*/
 /*飞的header样式开始*/
 .form-inline {
     flex-flow: row nowrap;
@@ -245,6 +317,7 @@ input[type="search"] {
 .cf-my-2 {
     margin-top: 0px;
     margin-bottom: 0px;
+    
 }
 .logo {
     float: left;
@@ -253,10 +326,11 @@ input[type="search"] {
     margin-right: -29px;
 /*    margin-top: -10px;*/
     transition: all 0.3s ease-in-out;    
+    left: 0px;
 }
 .site-name {
     font-size: 16px;
-    font-weight: bold;
+    font-weight:bolder;
     /*    transition: font-size 1s;*/
     transition: all 0.3s ease-in-out;
 }
@@ -268,11 +342,7 @@ input[type="search"] {
 .site-slogan {
     font-size: 14px;
 }
-/*
-#cf-headertext-ml {
-    margin-left: -29px;
-}
-*/
+
 /*导航样式beginning*/
 /*折叠菜单按钮位置*/
 .navbar-toggler {
@@ -351,11 +421,13 @@ input[type="search"] {
 .fixed-header-on .cf-my-2 {
     margin-top: 0px;
     margin-bottom: 0px;
+
 }
 .fixed-header-on .logo {
     transform: scale(0.7);
     margin-right: -29px;
-        transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
 }
 
 .fixed-header-on .site-name {
@@ -388,6 +460,25 @@ button.navbar-toggler:hover {
 
 /*飞的header样式结束*/
 
+/*轮播图样式开始*/
+#cf_carousel .carousel-item {
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+#cf_carousel .carousel-item img {
+    width: 100%;
+}
+@media screen and (min-width: 600px){
+    #cf_carousel .carousel-item {
+    height: 330px;
+}
+}
+
+
+
+/*轮播图样式结束*/
 
 /*我们的团队样式开始*/
 /*图集样式开始*/
@@ -398,36 +489,44 @@ button.navbar-toggler:hover {
 .overlay {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 20%;
     left: 0;
     right: 0;
-    background-color: rgba(98, 165, 216, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    transform: scale(0.8);
+    transform: scale(0.9);
     transition: all 0.2s;
     opacity: 0;
 }
-
+/*放大镜样式*/
 .overlay i {
     position: absolute;
-    left: 45%;
+    left: 30%;
     top: 40%;
-    font-size: 20px;
-    color: #fff;
-}
-
-.overlay h5 {
-    position: absolute;
-    bottom: 100px;
+/*放大镜图标大小*/
     font-size: 18px;
     color: #fff;
-    text-align: center;
-    width: 100%;
+    
+}
+/*遮罩文字样式*/
+.overlay h5 {
+    position: absolute;
+    top: 20px;
+  left: 10%;
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+/*    width: 100%;*/
 }
 
 .overlay-container:hover .overlay {
     opacity: 1;
     transform: scale(1);
+    position: absolute;
+    left: 0%;
+    bottom: 20%;
+
+
 }
 
 .card-body {
@@ -452,18 +551,53 @@ button.navbar-toggler:hover {
     opacity: 1;
 }
 
-/*新闻中心样式开始*/
+
+/*飞的产品样式开始*/
+#cf-product {
+    background-color: #f0f0f0;
+}
+
+#cf-product .nav-item {
+    font-size: 18px;
+}
+
+#cf-product .nav-item a {
+    color: #000;
+    border: none;
+    padding: 0px 25px;
+}
+
+
+#cf-product .nav-item a.active {
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px purple solid;
+    color: purple;
+}
+
+/*飞的产品样式结束*/
+
+
+
+
+/*新闻中心、企业介绍样式开始*/
+.card-body {
+    text-indent: 2em;
+}
+
+
 .card-header .btn.collapsed {
     background: #333333;
 }
 
 .card-header {
     padding: 0;
-    background: #0549b8;
+    background: #262627;
 }
 
 .card-header .btn:hover {
-    background: #0549b8;
+    background: #28292c;
+    font-size: 16px;
 }
 
 .card-header .btn {
@@ -473,6 +607,8 @@ button.navbar-toggler:hover {
     text-align: left;
     color: #fff;
     padding: 15px;
+            font-size: 16px;
+        font-family: 微软雅黑; 
 }
 
 .card-header .btn::after {
@@ -486,8 +622,49 @@ button.navbar-toggler:hover {
     content: '\f196';
 }
 
-/*新闻中心样式结束*/
+/*新闻中心、企业介绍样式结束*/
 /*飞的尾部样式开始*/
+footer {
+    background-color: #1f2024;
+    color: #606060;
+    border-top: 1px solid #343434;
+    padding: 10px 0;
+    line-height: 30px;
+
+}
+footer a {
+    color: #606060;
+}
+footer p {
+    margin: 0px;
+    font-size: 15px;
+}
+/*公司介绍样式开始*/
+.cf-uppercase {
+    text-transform: uppercase;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 0.87;
+    font-weight: bold;
+}
+section#about {
+    color: #cccccc;
+}
+
+#about h3, #service h3, #cf-friend h3, #goods h3 {
+     border-bottom: 2px solid #1995c9;
+     letter-spacing: 3px;
+}
+#about h4 {
+    font-family: "Microsoft YaHei", "宋体", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-indent: 0px;
+}
+#about .card-body {
+        background-color: #1f2024;
+}
+/*公司介绍样式结束*/
 #footer {
     width: 100%;
     height: 200px;
@@ -496,7 +673,7 @@ button.navbar-toggler:hover {
     background-image: url('/images/ft_bg.png');
 */
     /*   注意：：在css样式表中写的background-image:url(图片的路径为相对本css文件的路径，而不是我们通常认为的相对加入css样式的网页的路径); 所以这里之前写错路径导致在除chrome外的其它浏览器中本地打开无法显示背景图片的问题 */
-    background: url("/images/ft_bg.png") no-repeat center;
+    background: url("../images/ft_bg.png") no-repeat center;
     color: #c6bdbd;
     font-size: 15px;
 }
@@ -527,6 +704,9 @@ button.navbar-toggler:hover {
 
 .form-inline .btn {
     width: 25%;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 6px 0px;
 }
 
 /*飞的media query开始*/
@@ -555,7 +735,7 @@ button.navbar-toggler:hover {
 
     /*   飞加的，一级导航菜单项当可视宽度小于等于959时，菜单项左右间距变为10，以前是15 */
     body {
-        padding-top: 150px;
+        padding-top: 143px;
     }
 
     .navbar-nav .nav-item .nav-link {
@@ -566,10 +746,11 @@ button.navbar-toggler:hover {
     .form-inline .form-control {
         width: 55%;
     }
-
+/*搜索按钮样式设置*/
     .form-inline .btn {
         padding: 0.375rem 0.4rem;
-        font-size: 0.95rem;
+        font-size: 1rem;
+        font-weight: normal;
     }
 
     .site-name {

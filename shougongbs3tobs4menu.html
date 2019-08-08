@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../dm/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
     <title>原BS3手工导航现用BS4环境</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/brackets.css">
     <link rel="stylesheet" href="css/s.min.css">
-    <link rel="stylesheet" href="../dm/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!--    <meta name="theme-color" content="#fafafa">-->
 </head>
+
 <body data-spy="scroll">
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -25,24 +26,26 @@
     <!-- 本页主要功能：
    一、8月2日，修改原BS3下按教程写的成功的导航栏，想移植到BS4下，但未成功，因时间所限，暂时放弃                -->
     <!--------------------头部-begin------------------------------>
-<!--如果不加navbar -default ,则无法固定在页面顶部，即使css中body设了padding-top也无效-->
+    <!--如果不加navbar -default ,则无法固定在页面顶部，即使css中body设了padding-top也无效-->
     <header class="navbar-default fixed-top">
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-4 col-sm-4 col-xs-4">
-                    <a href="#"><img src="../dm/images/zzlogo.jpg" class="img-responsive" alt="华胜未来北京科技有限公司"></a>
+                    <a href="#"><img src="images/zzlogo.jpg" class="img-responsive" alt="华胜未来北京科技有限公司"></a>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
                     <form class="navbar-form navbar-left navbar-search" role="search">
-<!--                        <div class="form-group">-->
-                            <input type="text" class="search-query form-control" placeholder="有种放学别走！！">
-                        
+                        <!--                        <div class="form-group">-->
+                        <input type="text" class="search-query form-control" placeholder="有种放学别走！！">
+
                         <button type="submit" class="btn btn-default">搜索</button>
-<!--                        </div>-->
+                        <!--                        </div>-->
                     </form>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4"><div class="tel">联系我们：010-51652205</div></div>
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
+                    <div class="tel">联系我们：010-51652205</div>
+                </div>
 
             </div>
         </div>
@@ -50,62 +53,63 @@
 
         <div id="menubg">
             <div class="container">
-               
-<!--
+
+                <!--
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>               
 -->
-               
-               
-               
+
+
+
                 <a href="#nav" class="open toggle-btn"><i class="fa fa-bars fa-fw"></i></a>
-<!--                <a href="#top" class="close toggle-btn"><i class="fa fa-times-circle fa-fw" aria-hidden="true"></i></a>-->
-                
+                <!--                <a href="#top" class="close toggle-btn"><i class="fa fa-times-circle fa-fw" aria-hidden="true"></i></a>-->
+
                 <nav class="navbar navbar-expand-lg navbar-light jumpnav">
-                   <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li><a href="#" class="active"><i class="fa fa-home fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 网站首页</a></li>
-                        <li><a href="#about"><i class="fa fa-book fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 公司介绍</a></li>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav mr-auto">
+                            <li><a href="#" class="active"><i class="fa fa-home fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 网站首页</a></li>
+                            <li><a href="#about"><i class="fa fa-book fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 公司介绍</a></li>
 
-                        
-<li class="dropdown">
-        <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-database fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 产品介绍<span class="caret"></span>
-        </a>
-                  
 
-                           
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/shop/oracle/">ORACLE </a></li>
-                                <li><a class="dropdown-item" href="/shop/chaozuoxitong/">操作系统</a> </li>
-                                <li><a class="dropdown-item" href="/shop/shujuku/">数据库及中间件</a></li>
-                                <li><a class="dropdown-item" href="/shop/shadu/">杀毒软件</a></li>
-                                <li><a class="dropdown-item" href="/shop/bangong/">办公和OA自动化</a></li>
-                                <li><a class="dropdown-item" href="/shop/kaifa/">开发工具</a></li>
-                                <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item" href="/shop/shuangji/">双机容错及备份软件</a></li>
-                                <li><a class="dropdown-item" href="/shop/tuxiang/">图像处理</a></li>
-                                <li><a class="dropdown-item" href="/shop/wangye/">网页制作</a> </li>
-                                <li><a class="dropdown-item" href="/shop/caiwu/">财务及管理软件</a></li>
-                                <li><a class="dropdown-item" href="/shop/anfang/">安防及入侵检测</a></li>
-                                <li><a class="dropdown-item" href="/shop/wangguan/">网管软件</a></li>
-                                <li><a class="dropdown-item" href="/shop/youjian/">邮件管理软件</a></li>
-                                <div class="dropdown-divider"></div>
-                                <li><a class="dropdown-item" href="/shop/jiankong/">网络监控软件</a></li>
-                                <li><a class="dropdown-item" href="/shop/3d/">建筑3D及机械制图</a></li>
-                                <li><a class="dropdown-item" href="/shop/faiban/">排版和辅助设计</a> </li>
-                                <li><a class="dropdown-item" href="/shop/duomeiti/">多媒体软件</a></li>
-                                <li><a class="dropdown-item" href="/shop/adobe/">ADOBE</a></li>
-                                <li><a class="dropdown-item" href="/shop/bea/">BEA</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="/news/" target="_self"><i class="fa fa-newspaper-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 新闻资讯</a></li>
-                        <li><a href="/wl.html" target="_self"><i class="fa fa-globe fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 营销网络</a></li>
-                        <li><a href="/hr.html" target="_self"><i class="fa fa-user-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 人才招聘</a></li>
-                        <li><a href="/e/tool/gbook/?bid=1" target="_self"><i class="fa fa-envelope fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 信息反馈</a></li>
-                        <li><a href="/fuwu.html" target="_self"><i class="fa fa-handshake-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 客户服务</a></li>
-                    </ul></div>
-                
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-database fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 产品介绍<span class="caret"></span>
+                                </a>
+
+
+
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/shop/oracle/">ORACLE </a></li>
+                                    <li><a class="dropdown-item" href="/shop/chaozuoxitong/">操作系统</a> </li>
+                                    <li><a class="dropdown-item" href="/shop/shujuku/">数据库及中间件</a></li>
+                                    <li><a class="dropdown-item" href="/shop/shadu/">杀毒软件</a></li>
+                                    <li><a class="dropdown-item" href="/shop/bangong/">办公和OA自动化</a></li>
+                                    <li><a class="dropdown-item" href="/shop/kaifa/">开发工具</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="/shop/shuangji/">双机容错及备份软件</a></li>
+                                    <li><a class="dropdown-item" href="/shop/tuxiang/">图像处理</a></li>
+                                    <li><a class="dropdown-item" href="/shop/wangye/">网页制作</a> </li>
+                                    <li><a class="dropdown-item" href="/shop/caiwu/">财务及管理软件</a></li>
+                                    <li><a class="dropdown-item" href="/shop/anfang/">安防及入侵检测</a></li>
+                                    <li><a class="dropdown-item" href="/shop/wangguan/">网管软件</a></li>
+                                    <li><a class="dropdown-item" href="/shop/youjian/">邮件管理软件</a></li>
+                                    <div class="dropdown-divider"></div>
+                                    <li><a class="dropdown-item" href="/shop/jiankong/">网络监控软件</a></li>
+                                    <li><a class="dropdown-item" href="/shop/3d/">建筑3D及机械制图</a></li>
+                                    <li><a class="dropdown-item" href="/shop/faiban/">排版和辅助设计</a> </li>
+                                    <li><a class="dropdown-item" href="/shop/duomeiti/">多媒体软件</a></li>
+                                    <li><a class="dropdown-item" href="/shop/adobe/">ADOBE</a></li>
+                                    <li><a class="dropdown-item" href="/shop/bea/">BEA</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/news/" target="_self"><i class="fa fa-newspaper-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 新闻资讯</a></li>
+                            <li><a href="/wl.html" target="_self"><i class="fa fa-globe fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 营销网络</a></li>
+                            <li><a href="/hr.html" target="_self"><i class="fa fa-user-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 人才招聘</a></li>
+                            <li><a href="/e/tool/gbook/?bid=1" target="_self"><i class="fa fa-envelope fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 信息反馈</a></li>
+                            <li><a href="/fuwu.html" target="_self"><i class="fa fa-handshake-o fa-fw  hidden-md  hidden-sm" aria-hidden="true"></i> 客户服务</a></li>
+                        </ul>
+                    </div>
+
                 </nav>
             </div>
         </div>
@@ -146,7 +150,7 @@
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso1">
 
                         <div class="card overlay-container" style="width: rem;">
-                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="">
+                            <img class="card-img-top" src="images/200girl.jpg" alt="">
                             <div class="card-body">
                                 <a href="#" class="overlay" data-toggle="modal" data-target="#Modal1">
                                     <i class="fa fa-search-plus"></i>
@@ -192,7 +196,7 @@
                     </div>
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso2">
                         <div class="card" style="width: rem;">
-                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/200girl.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <a href="">
                                     <h5 class="card-title text-center">红旗Linux市场部</h5>
@@ -202,7 +206,7 @@
                     </div>
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-2 iso3">
                         <div class="card" style="width: rem;">
-                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/200girl.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <a href="">
                                     <h5 class="card-title text-center">Ubuntu研发部</h5>
@@ -212,7 +216,7 @@
                     </div>
                     <div class="col-6 col-sm-6 col-md-4 col-xl-3 mb-1 iso1">
                         <div class="card" style="width: rem;">
-                            <img class="card-img-top" src="../dm/images/200girl.jpg" alt="">
+                            <img class="card-img-top" src="images/200girl.jpg" alt="">
                             <div class="card-body">
                                 <a href="">
                                     <h5 class="card-title text-center">Red Hat Linux工程部</h5>
@@ -237,7 +241,7 @@
                 <div class="card-deck">
 
                     <div class="card">
-                        <img class="card-img-top animated flipInY" src="../dm/images/girls.jpg" alt="">
+                        <img class="card-img-top animated flipInY" src="images/girls.jpg" alt="">
                         <div class="card-body">
                         </div>
                         <div class="card-footer">
@@ -246,7 +250,7 @@
                     </div>
 
                     <div class="card">
-                        <img class="card-img-top animated zoomIn" src="../dm/images/girls.jpg" alt="">
+                        <img class="card-img-top animated zoomIn" src="images/girls.jpg" alt="">
                         <div class="card-body">
                         </div>
                         <div class="card-footer">
@@ -255,7 +259,7 @@
                     </div>
 
                     <div class="card">
-                        <img class="card-img-top animated lightSpeedIn" src="../dm/images/girls.jpg" alt="">
+                        <img class="card-img-top animated lightSpeedIn" src="images/girls.jpg" alt="">
                         <div class="card-body">
                         </div>
                         <div class="card-footer">
@@ -360,7 +364,7 @@
             <div class="row">
                 <div class="card-deck mb-3 object-non-visiable" data-animation-effect="fadeIn">
                     <div class="card">
-                        <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                        <img class="card-img-top" src="images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Card title1</h5>
 
@@ -370,7 +374,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                        <img class="card-img-top" src="images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
                         <div class="card-body">
                             <h5 class="card-title text-center">Card title2</h5>
 
@@ -381,7 +385,7 @@
                     </div>
 
                     <div class="card">
-                        <img class="card-img-top" src="../dm/images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
+                        <img class="card-img-top" src="images/妙味课堂CSS3弹性盒模型-分栏布局.png" alt="">
                         <div class="card-body">
                             <h5 class="card-title">Card title2</h5>
 
@@ -433,8 +437,8 @@
                 </div>
                 <div class="col-md-6 col-lg-3 d-none d-sm-none d-md-block">
                     <h6>联系我们</h6>
-                    <a href=""><img src="../dm/images/weixin-h.png" width="50" alt="" data-toggle="tooltip" data-placement="bottom" title="微信号：shetuan02"></a>
-                    <a href=""><img src="../dm/images/xinlang-h.png" width="50" alt="" data-placement="bottom" data-toggle="tooltip" title="微博：华胜未来"></a>
+                    <a href=""><img src="images/weixin-h.png" width="50" alt="" data-toggle="tooltip" data-placement="bottom" title="微信号：shetuan02"></a>
+                    <a href=""><img src="images/xinlang-h.png" width="50" alt="" data-placement="bottom" data-toggle="tooltip" title="微博：华胜未来"></a>
                 </div>
             </div>
         </div>
@@ -446,7 +450,7 @@
     <script src="js/plugins.js"></script>
 
     <script src="js/vendor/popper.js"></script>
-    <script src="../dm/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src=".bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/main.js"></script>
     <script>
